@@ -1,0 +1,434 @@
+/*
+ * Copyright (c) 2015 JKD TEAM (9koudai.net)
+ * @Author: fcdcyy@sina.cn
+ *
+ * @DateTime: 2015-03-23 09:09:49
+ */
+
+@charset "utf-8";
+
+$color: #f6f602;   //主体颜色
+$bg: #000000;      //主要背景
+$lcolor: #005ea7;   //链接颜色
+
+
+//字体大小方法
+@mixin fz($size: 12px){
+  font-size: $size;
+}
+//单边边框方法
+@mixin bor($dt, $ct: #1a1a1a){
+  border-#{$dt}: 1px solid $ct;
+}
+//全边框方法
+@mixin border($ct: #1a1a1a){
+  border: 1px solid $ct;
+}
+//圆角方法
+@mixin radius($radius: 10px) {
+  　-webkit-border-radius: $radius;
+  　-moz-border-radius: $radius;
+  　border-radius: $radius;
+}
+//外边距
+@mixin margin($margin: 10px){
+  margin: $margin;
+}
+//内边距
+@mixin padding($padding: 10px){
+  padding: $padding;
+}
+//文字对齐方式
+@mixin align($align: center){
+  text-align:$align;
+}
+//三角形
+@mixin tri($dire,$dc,$width){
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: $width solid transparent;
+  border-#{$dire}-color: $dc;
+}
+/* 首页banner */
+.bannerBox{
+  min-width: 1200px;
+  width: 100%;
+  height:680px;
+  margin: auto;
+  overflow:hidden;
+  position:relative;
+  & > .hd{
+    width: 100%;
+    height: 40px;
+    overflow:hidden;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    z-index:1;
+    text-align: center;
+    ul{
+      zoom:1;
+      li{
+        display: inline-block;
+        *display:inline;
+        zoom:1;
+        width: 14px;
+        height: 14px;
+        font-size: 0;
+        font-weight: bold;
+        margin: 5px 15px 0 0;
+        border-radius: 50%;
+        background: #222;
+        opacity: .8;
+        color: #fff;
+        box-shadow: 0 0 5px;
+        cursor: pointer;
+        &.on{
+          background:$color;
+          color:#fff;
+        }
+      }
+    }
+  }
+  & > .bd{
+    position:relative;
+    height:100%;
+    z-index:0;
+    li{
+      zoom:1;
+      vertical-align:middle;
+      height:680px;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+//视频专区
+.cont_h1{
+  padding-bottom: 40px;
+}
+.cont_t{
+  @extend %clearfix;
+  margin-top: 50px;
+  .cont_tl{
+    @extend %fl;
+    width: 300px;
+    height: 55px;
+    background-repeat: no-repeat;
+  }
+  .cont_tr{
+    @extend %fr;
+    width: 43px;
+    height: 22px;
+    margin-top: 33px;
+    @extend %icon;
+    &:hover{
+      background-position: 0 -23px;
+    }
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.video_list{
+  margin-top: 50px;
+  @extend %clearfix;
+  overflow: hidden;
+  width: 1200px;
+  cursor: pointer;
+  ul{
+    width: 1300px;
+  }
+  li{
+    width: 340px;
+    margin-right: 90px;
+    @extend %fl;
+  }
+  .box{
+    @include border(#ccc);
+    height: 278px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .txt{
+    color: #333;
+    margin-top: 10px;
+    @include fz(18px);
+    @extend %nowrap;
+  }
+}
+
+.s_01{
+  background-image: url(../images/video.png);
+}
+
+.s_02{
+  background-image: url(../images/news.png);
+}
+
+.s_03{
+  background-image: url(../images/investment.png);
+}
+
+.s_04{
+  background-image: url(../images/portfolios.png);
+}
+
+//新闻资讯
+.cont_h2{
+  background: #eeeded;
+  @extend %minw;
+}
+.bnext{
+  background: #fff;
+  width: 80px;
+  height: 40px;
+  margin: auto;
+  @include align;
+  cursor: pointer;
+  &:after{
+    content:'';
+    width: 36px;
+    height: 22px;
+    @extend %inline,%icon;
+    background-position: -4px -80px;
+    margin-top: 8px;
+  }
+}
+
+.news_con{
+  background: url(../images/news_icon.png) no-repeat;
+  background-position: 140px 60px;
+  @extend %clearfix;
+  .cont_tr{
+    background-position: 0 -46px;
+  }
+}
+
+.news_l{
+  @extend %fl;
+  width: 480px;
+  margin-left: 20px;
+}
+
+.news_list{
+  margin-top: 42px;
+  a{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  li{
+    @extend %clearfix;
+    padding: 20px 0;
+    border-top:1px dashed #f5f4f4;
+    &:first-child{
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+  .news_img{
+    width: 118px;
+    height: 82px;
+    overflow: hidden;
+    @extend %fl;
+    @include border(#b9b8bd);
+    img{
+      width: 100%;
+    }
+  }
+  .news_tit{
+    width: 338px;
+    margin-left: 12px;
+    @extend %fl;
+    span{
+      @include fz(16px);
+      display: block;
+      @extend %nowrap;
+      a{
+        color: #333;
+      }
+    }
+    i{
+      color: #999;
+      display: block;
+      padding: 5px 0;
+      @extend %nowrap;
+    }
+    em{
+      @include fz(14px);
+      display: block;
+      height: 42px;
+      overflow: hidden;
+      a{
+        color: #666;
+      }
+    }
+  }
+}
+
+.news_r{
+  @extend %fr;
+  margin-right: 20px;
+  width: 480px;
+}
+
+
+//已投项目
+.cont_h3{
+  padding-bottom: 50px;
+  .cont_h3_ul{
+    overflow: hidden;
+    width: 1200px;
+  }
+  ul{
+    width: 1300px;
+  }
+  .bnext{
+    background: #eeeded;
+    &:after{
+      background-position: -4px -110px;
+    }
+  }
+  ul{
+    @extend %clearfix;
+    margin-top: 20px;
+  }
+  li{
+    @extend %pr,%fl;
+    width: 280px;
+    height: 80px;
+    overflow: hidden;
+    margin: 40px 26px 0 0;
+    &:hover{
+      .box,.mask{
+        display: block;
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+  a{
+    color: #fff;
+  }
+  .mask{
+    display: none;
+    @extend %pa;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  }
+  .box{
+    display: none;
+    width: 100%;
+    height: 100%;
+    @extend %pa;
+    top: 0;
+    left: 0;
+    @include align;
+    span,em{
+      display: block;
+      width: 80%;
+      margin: auto;
+      @extend %nowrap;
+    }
+    span{
+      @include fz(18px);
+      margin-top: 14px;
+      font-weight: bold;
+    }
+    em{
+      @include fz(14px);
+      margin-top: 8px;
+    }
+  }
+}
+
+%ffst{  //宋体
+  font-family: SimSun;
+}
+%ffht{  //黑体
+  font-family: SimHei;
+}
+%ffyh{  //微软雅黑
+  font-family: Microsoft yahei;
+}
+%ffar{  //Arial
+  font-family: Arial;
+}
+%icon{  //图标集
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat;
+}
+%w100{  //图片自适应
+  width: 100%;
+}
+%nowrap{  //单行文字
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+%inline{  //行内元素
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  vertical-align: middle;
+}
+%imgtc{    //图片的垂直居中
+  display: table-cell;
+  vertical-align:middle;
+  text-align:center;
+  *display: block;
+  *font-size: 175px;/*约为高度的0.873，200*0.873 约为175*/
+  *font-family:Arial;
+  width:200px;
+  height:200px;
+  border: 1px solid #eee;
+}
+%center{    //主体居中
+  width: 1200px;
+  margin: auto;
+}
+%minw{    //最小宽度
+  min-width: 1200px;
+}
+%clearfix {
+  zoom:1;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+%fl{
+  float: left;
+}
+%fr{
+  float: right;
+}
+%pr{
+  position: relative;
+}
+%pa{
+  position: absolute;
+}

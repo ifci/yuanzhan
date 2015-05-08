@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'd:\\nodejs\\node.exe',
+1 verbose cli   'd:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'amazeui' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.34
+4 verbose cache add [ 'amazeui', null ]
+5 verbose cache add name=undefined spec="amazeui" args=["amazeui",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'amazeui',
+6 verbose parsed url   path: 'amazeui',
+6 verbose parsed url   href: 'amazeui' }
+7 silly lockFile 6651270d-amazeui amazeui
+8 verbose lock amazeui C:\Users\Administrator\AppData\Roaming\npm-cache\6651270d-amazeui.lock
+9 silly lockFile 6651270d-amazeui amazeui
+10 silly lockFile 6651270d-amazeui amazeui
+11 verbose addNamed [ 'amazeui', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 0f6491d5-amazeui amazeui@
+14 verbose lock amazeui@ C:\Users\Administrator\AppData\Roaming\npm-cache\0f6491d5-amazeui.lock
+15 silly addNameRange { name: 'amazeui', range: '*', hasData: false }
+16 verbose request where is /amazeui
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id a74c56418cd304d9
+19 verbose url raw /amazeui
+20 verbose url resolving [ 'https://registry.npmjs.org/', './amazeui' ]
+21 verbose url resolved https://registry.npmjs.org/amazeui
+22 verbose request where is https://registry.npmjs.org/amazeui
+23 info trying registry request attempt 1 at 15:50:41
+24 http GET https://registry.npmjs.org/amazeui
+25 http 200 https://registry.npmjs.org/amazeui
+26 silly registry.get cb [ 200,
+26 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"5OX0E8Z0YMMI48LK14VZ88JGX"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '42559',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Wed, 06 May 2015 07:48:03 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-nrt6123-NRT',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1430898483.041387,VS0,VE906',
+26 silly registry.get     vary: 'Accept' } ]
+27 silly addNameRange number 2 { name: 'amazeui', range: '*', hasData: true }
+28 silly addNameRange versions [ 'amazeui',
+28 silly addNameRange   [ '1.0.0-beta2',
+28 silly addNameRange     '1.0.0-rc1',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.0.1',
+28 silly addNameRange     '2.0.0-dp1',
+28 silly addNameRange     '2.0.0-beta1',
+28 silly addNameRange     '2.0.0',
+28 silly addNameRange     '2.1.0-beta1',
+28 silly addNameRange     '1.0.2',
+28 silly addNameRange     '2.1.0',
+28 silly addNameRange     '2.1.1',
+28 silly addNameRange     '2.1.2',
+28 silly addNameRange     '2.1.3',
+28 silly addNameRange     '2.2.0',
+28 silly addNameRange     '2.2.1',
+28 silly addNameRange     '2.3.0' ] ]
+29 verbose addNamed [ 'amazeui', '2.3.0' ]
+30 verbose addNamed [ '2.3.0', '2.3.0' ]
+31 silly lockFile a5309ab5-amazeui-2-3-0 amazeui@2.3.0
+32 verbose lock amazeui@2.3.0 C:\Users\Administrator\AppData\Roaming\npm-cache\a5309ab5-amazeui-2-3-0.lock
+33 silly lockFile 5458393a-js-org-amazeui-amazeui-2-3-0-tgz https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz
+34 verbose lock https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz C:\Users\Administrator\AppData\Roaming\npm-cache\5458393a-js-org-amazeui-amazeui-2-3-0-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz',
+35 verbose addRemoteTarball   '964c21cda43e0bd9450e44ff98dc800c48760ab3' ]
+36 info retry fetch attempt 1 at 15:50:44
+37 verbose fetch to= C:\Users\ADMINI~1\AppData\Local\Temp\npm-13660-Z4X4K0sh\registry.npmjs.org\amazeui\-\amazeui-2.3.0.tgz
+38 http GET https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz
+39 http 200 https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz
+40 silly lockFile 5458393a-js-org-amazeui-amazeui-2-3-0-tgz https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz
+41 silly lockFile 5458393a-js-org-amazeui-amazeui-2-3-0-tgz https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz
+42 silly lockFile a5309ab5-amazeui-2-3-0 amazeui@2.3.0
+43 silly lockFile a5309ab5-amazeui-2-3-0 amazeui@2.3.0
+44 silly lockFile 0f6491d5-amazeui amazeui@
+45 silly lockFile 0f6491d5-amazeui amazeui@
+46 error Error: shasum check failed for C:\Users\ADMINI~1\AppData\Local\Temp\npm-13660-Z4X4K0sh\registry.npmjs.org\amazeui\-\amazeui-2.3.0.tgz
+46 error Expected: 964c21cda43e0bd9450e44ff98dc800c48760ab3
+46 error Actual:   267570dbb6fc964de34b2ef4a74876b08ded4014
+46 error From:     https://registry.npmjs.org/amazeui/-/amazeui-2.3.0.tgz
+46 error     at d:\nodejs\node_modules\npm\node_modules\sha\index.js:38:8
+46 error     at ReadStream.<anonymous> (d:\nodejs\node_modules\npm\node_modules\sha\index.js:85:7)
+46 error     at ReadStream.emit (events.js:117:20)
+46 error     at _stream_readable.js:944:16
+46 error     at process._tickCallback (node.js:442:13)
+47 error If you need help, you may report this *entire* log,
+47 error including the npm and node versions, at:
+47 error     <http://github.com/npm/npm/issues>
+48 error System Windows_NT 6.1.7601
+49 error command "d:\\nodejs\\node.exe" "d:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "amazeui"
+50 error cwd d:\www\yuanzhan\public\home
+51 error node -v v0.10.34
+52 error npm -v 1.4.28
+53 verbose exit [ 1, true ]

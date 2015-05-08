@@ -1,0 +1,46 @@
+<include file="Base:header" />
+
+
+<!--content开始-->
+    <div id="content">
+        <include file="Base:inside" />
+        <!-- 案例 -->
+        <div class="introduction bgf8 pb30">
+            <div class="main_t center tac">
+                <b>{:L('T_NEWS')}</b>
+            </div>
+            <ul class="case center">
+                <volist name="list" id="vo">
+                <li>
+                    <div class="case_ty6 clearfix">
+                        <div class="w50 fl">
+                            {$vo.title}
+                        </div>
+
+                        <div class="w50 tar fl">
+                            发表日期：{:date('Y/m/d',$vo['published'])}
+                        </div>
+                    </div>
+                    <a href='{:U('news/read',array('id'=>$vo['id']))}' title="">
+                        <div class="case_ty1 clearfix">
+                            <div class="case_ty2 fl wimg">
+                                <img src="{:get_default_img($vo['image_id'])}" alt="" />
+                            </div>
+                            <div class="case_ty3 case_ty8 fl">
+                                {$vo.summary}
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                </volist>
+
+                <div class="tac">
+                    {$page}
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!--content结束-->
+
+
+<include file="Base:footer" />

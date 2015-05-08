@@ -1,0 +1,416 @@
+/*
+ * Copyright (c) 2015 JKD TEAM (9koudai.net)
+ * @Author: fcdcyy@sina.cn
+ *
+ * @DateTime: 2015-03-23 09:09:49
+ */
+
+@charset "utf-8";
+
+$color: #f6f602;   //主体颜色
+$bg: #252525;      //主要背景
+$lcolor: #005ea7;   //链接颜色
+
+
+//字体大小方法
+@mixin fz($size: 12px){
+  font-size: $size;
+}
+//单边边框方法
+@mixin bor($dt, $ct: #1a1a1a){
+  border-#{$dt}: 1px solid $ct;
+}
+//全边框方法
+@mixin border($ct: #1a1a1a){
+  border: 1px solid $ct;
+}
+//圆角方法
+@mixin radius($radius: 10px) {
+  　-webkit-border-radius: $radius;
+  　-moz-border-radius: $radius;
+  　border-radius: $radius;
+}
+//外边距
+@mixin margin($margin: 10px){
+  margin: $margin;
+}
+//内边距
+@mixin padding($padding: 10px){
+  padding: $padding;
+}
+//文字对齐方式
+@mixin align($align: center){
+  text-align:$align;
+}
+//三角形
+@mixin tri($dire,$dc,$width){
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: $width solid transparent;
+  border-#{$dire}-color: $dc;
+}
+
+
+
+html, body, form, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, em, address, a, input, textarea, span, strong, img {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 12px;
+  color: #666;
+  @extend %ffyh;
+}
+
+ul, dl {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  font-size: 12px;
+  outline: none;
+}
+
+img {
+  border: none;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  blr: expression(this.onFocus=this.blur());
+  outline: none;
+   -webkit-transition: color 0.8s ease;-moz-transition: color 0.8s ease;-o-transition: color 0.8s ease;transition: color 0.8s ease;
+}
+
+a:hover {
+  color: $color;
+}
+
+i, em {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0px;
+}
+
+thead, tbody, tfoot, tr, td {
+  margin: 0px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+::selection{background:#e57779;color: #fff;}
+
+::-webkit-selection{background:#e57779;color: #fff;}
+
+::-moz-selection{background:#e57779;color: #fff;}
+
+section, article, aside, header, footer, nav, dialog, figure {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix{
+  zoom:1;
+}
+
+.pr {
+  position: relative;
+  z-index: 0;
+}
+
+.pa {
+  position: absolute;
+}
+
+.tin {
+  text-indent: 2em;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.center{
+  width: 1200px;
+  margin: auto;
+}
+
+
+/**********  header头部  *********/
+
+#header {
+  width: 100%;
+  background: #000;
+  height: 90px;
+  overflow: hidden;
+  @extend %minw;
+}
+
+.logo {
+  @extend .fl;
+  width: 238px;
+  height: 70px;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+
+/**********  nav头部导航 *********/
+
+.nav {
+  @extend %fr;
+  max-width: 700px;
+  ul {
+    li {
+      @extend %fl;
+      width: 210px;
+      height: 90px;
+      @include align;
+      @include fz(14px);
+      @include bor(right);
+      &:first-child{
+        @include bor(left);
+      }
+    }
+    a{
+      display: block;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      &:hover,&.nav_on{
+        color: $color;
+      }
+    }
+    span,em{
+      display: block;
+    }
+    span{
+      @extend %ffar;
+      margin-top: 24px;
+    }
+    em{
+      margin-top: 5px;
+    }
+  }
+}
+
+
+/**********  content  *********/
+#content{
+  width: 100%;
+}
+
+
+/**********  footer底部  *********/
+
+#footer {
+  width: 100%;
+  background: $bg;
+  overflow: hidden;
+  @extend %clearfix,%minw;
+  color: #a4a4a4;
+  @include fz(14px);
+  padding-bottom: 30px;
+  a{
+    color: #a4a4a4;
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
+}
+
+.footer_l{
+  @extend %fl;
+  margin-top: 60px;
+  & > div{
+    margin-top: 14px;
+  }
+}
+
+.footer_nav{
+  @extend %clearfix;
+  li{
+    @extend %fl;
+    border-left: 2px solid #a4a4a4;
+    line-height: 1;
+    padding: 0 5px;
+    &:first-child{
+      border: none;
+      padding-left: 0;
+    }
+  }
+}
+
+.footer_tel{
+  @include fz(16px);
+}
+
+.footer_r{
+  @extend %fr;
+  margin-top: 46px;
+  li{
+    @extend %fl;
+    margin-left: 30px;
+    @include align;
+    color: #ccc;
+    width: 146px;
+    span{
+      display: block;
+      width: 100%;
+      height: 146px;
+      overflow: hidden;
+    }
+    em{
+      display: block;
+      height: 40px;
+      line-height: 3;
+      overflow: hidden;
+    }
+  }
+}
+
+/*分页样式*/
+.paging{
+  @include align;
+  a{
+    @extend %inline;
+    @include border(#e2e0e0);
+  }
+  span{
+    @extend %inline;
+  }
+  a,span{
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  a:hover,span{
+    background: #6d6d6d;
+    @include border(#666);
+    color: #fff;
+  }
+}
+
+
+//弹出层组件
+#layer{
+
+}
+.layer-shade{
+  background: #000;
+  opacity: .3;
+  filter:alpha(opacity=30);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+
+
+
+%ffst{  //宋体
+  font-family: SimSun;
+}
+%ffht{  //黑体
+  font-family: SimHei;
+}
+%ffyh{  //微软雅黑
+  font-family: Microsoft yahei;
+}
+%ffar{  //Arial
+  font-family: Arial;
+}
+%icon{  //图标集
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat;
+}
+%w100{  //图片自适应
+  width: 100%;
+}
+%nowrap{  //单行文字
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+%inline{  //行内元素
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  vertical-align: middle;
+}
+%imgtc{    //图片的垂直居中
+  display: table-cell;
+  vertical-align:middle;
+  text-align:center;
+  *display: block;
+  *font-size: 175px;/*约为高度的0.873，200*0.873 约为175*/
+  *font-family:Arial;
+  width:200px;
+  height:200px;
+  border: 1px solid #eee;
+}
+%center{    //主体居中
+  width: 1200px;
+  margin: auto;
+}
+%minw{    //最小宽度
+  min-width: 1200px;
+}
+%clearfix {
+  zoom:1;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+%fl{
+  float: left;
+}
+%fr{
+  float: right;
+}
+%pr{
+  position: relative;
+}
+%pa{
+  position: absolute;
+}

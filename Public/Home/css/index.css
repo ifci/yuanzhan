@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/*
+ * Copyright (c) 2015 JKD TEAM (9koudai.net)
+ * @Author: fcdcyy@sina.cn
+ *
+ * @DateTime: 2015-03-23 09:09:49
+ */
+/* 首页banner */
+.bannerBox {
+  min-width: 1200px;
+  width: 100%;
+  height: 680px;
+  margin: auto;
+  overflow: hidden;
+  position: relative; }
+  .bannerBox > .hd {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    text-align: center; }
+    .bannerBox > .hd ul {
+      zoom: 1; }
+      .bannerBox > .hd ul li {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        width: 14px;
+        height: 14px;
+        font-size: 0;
+        font-weight: bold;
+        margin: 5px 15px 0 0;
+        border-radius: 50%;
+        background: #222;
+        opacity: .8;
+        color: #fff;
+        box-shadow: 0 0 5px;
+        cursor: pointer; }
+        .bannerBox > .hd ul li.on {
+          background: #f6f602;
+          color: #fff; }
+  .bannerBox > .bd {
+    position: relative;
+    height: 100%;
+    z-index: 0; }
+    .bannerBox > .bd li {
+      zoom: 1;
+      vertical-align: middle;
+      height: 680px; }
+      .bannerBox > .bd li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: auto; }
+
+.cont_h1 {
+  padding-bottom: 40px; }
+
+.cont_t {
+  margin-top: 50px; }
+  .cont_t .cont_tl {
+    width: 300px;
+    height: 55px;
+    background-repeat: no-repeat; }
+  .cont_t .cont_tr {
+    width: 43px;
+    height: 22px;
+    margin-top: 33px; }
+    .cont_t .cont_tr:hover {
+      background-position: 0 -23px; }
+    .cont_t .cont_tr a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+
+.video_list {
+  margin-top: 50px;
+  overflow: hidden;
+  width: 1200px;
+  cursor: pointer; }
+  .video_list ul {
+    width: 1300px; }
+  .video_list li {
+    width: 340px;
+    margin-right: 90px; }
+  .video_list .box {
+    border: 1px solid #ccc;
+    height: 278px;
+    overflow: hidden; }
+    .video_list .box img {
+      width: 100%; }
+  .video_list .txt {
+    color: #333;
+    margin-top: 10px;
+    font-size: 18px; }
+
+.s_01 {
+  background-image: url(../images/video.png); }
+
+.s_02 {
+  background-image: url(../images/news.png); }
+
+.s_03 {
+  background-image: url(../images/investment.png); }
+
+.s_04 {
+  background-image: url(../images/portfolios.png); }
+
+.cont_h2 {
+  background: #eeeded; }
+
+.bnext {
+  background: #fff;
+  width: 80px;
+  height: 40px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer; }
+  .bnext:after {
+    content: '';
+    width: 36px;
+    height: 22px;
+    background-position: -4px -80px;
+    margin-top: 8px; }
+
+.news_con {
+  background: url(../images/news_icon.png) no-repeat;
+  background-position: 140px 60px; }
+  .news_con .cont_tr {
+    background-position: 0 -46px; }
+
+.news_l {
+  width: 480px;
+  margin-left: 20px; }
+
+.news_list {
+  margin-top: 42px; }
+  .news_list a:hover {
+    text-decoration: underline; }
+  .news_list li {
+    padding: 20px 0;
+    border-top: 1px dashed #f5f4f4; }
+    .news_list li:first-child {
+      border-top: none;
+      padding-top: 0; }
+  .news_list .news_img {
+    width: 118px;
+    height: 82px;
+    overflow: hidden;
+    border: 1px solid #b9b8bd; }
+    .news_list .news_img img {
+      width: 100%; }
+  .news_list .news_tit {
+    width: 338px;
+    margin-left: 12px; }
+    .news_list .news_tit span {
+      font-size: 16px;
+      display: block; }
+      .news_list .news_tit span a {
+        color: #333; }
+    .news_list .news_tit i {
+      color: #999;
+      display: block;
+      padding: 5px 0; }
+    .news_list .news_tit em {
+      font-size: 14px;
+      display: block;
+      height: 42px;
+      overflow: hidden; }
+      .news_list .news_tit em a {
+        color: #666; }
+
+.news_r {
+  margin-right: 20px;
+  width: 480px; }
+
+.cont_h3 {
+  padding-bottom: 50px; }
+  .cont_h3 .cont_h3_ul {
+    overflow: hidden;
+    width: 1200px; }
+  .cont_h3 ul {
+    width: 1300px; }
+  .cont_h3 .bnext {
+    background: #eeeded; }
+    .cont_h3 .bnext:after {
+      background-position: -4px -110px; }
+  .cont_h3 ul {
+    margin-top: 20px; }
+  .cont_h3 li {
+    width: 280px;
+    height: 80px;
+    overflow: hidden;
+    margin: 40px 26px 0 0; }
+    .cont_h3 li:hover .box, .cont_h3 li:hover .mask {
+      display: block; }
+    .cont_h3 li img {
+      width: 100%; }
+  .cont_h3 a {
+    color: #fff; }
+  .cont_h3 .mask {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); }
+  .cont_h3 .box {
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center; }
+    .cont_h3 .box span, .cont_h3 .box em {
+      display: block;
+      width: 80%;
+      margin: auto; }
+    .cont_h3 .box span {
+      font-size: 18px;
+      margin-top: 14px;
+      font-weight: bold; }
+    .cont_h3 .box em {
+      font-size: 14px;
+      margin-top: 8px; }
+
+.cont_t .cont_tr, .bnext:after {
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat; }
+
+.video_list .txt, .news_list .news_tit span, .news_list .news_tit i, .cont_h3 .box span, .cont_h3 .box em {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.bnext:after {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle; }
+
+.cont_h2 {
+  min-width: 1200px; }
+
+.cont_t, .video_list, .news_con, .news_list li, .cont_h3 ul {
+  zoom: 1; }
+  .cont_t:after, .video_list:after, .news_con:after, .news_list li:after, .cont_h3 ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+.cont_t .cont_tl, .video_list li, .news_l, .news_list .news_img, .news_list .news_tit, .cont_h3 li {
+  float: left; }
+
+.cont_t .cont_tr, .news_r {
+  float: right; }
+
+.cont_h3 li {
+  position: relative; }
+
+.cont_h3 .mask, .cont_h3 .box {
+  position: absolute; }
+
+/*# sourceMappingURL=index.css.map */

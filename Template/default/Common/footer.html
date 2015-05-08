@@ -1,0 +1,57 @@
+<!--footer开始-->
+    <div id="footer" class="footer">
+        <div class="center">
+            <div class="footer_l">
+                <!--底部导航-->
+                <div class="footer_nav">
+                    <ul>
+                        <nav posstion="bottom" order="sort ASC">
+                        <li>
+                            <a href="<if condition='$action eq null'>{$link}<else />{:U($action)}</if>" title="{$nav_name}">{$nav_name}</a>
+                        </li>
+                        </nav>
+                    </ul>
+                </div>
+                <!--服务热线-->
+                <div class="footer_tel">
+                    全国服务热线：{$site.tel}
+                </div>
+                <!--版权信息-->
+                <div>
+                    COPYRIGHT © 远瞻股权投资管理（上海）有限公司
+                </div>
+                <!--统计代码-->
+                <div><a href="#" target="_blank">站长统计</a></div>
+            </div>
+
+            <div class="footer_r">
+                <ul>
+                    <li>
+                        <span><img src="__IMG__/qrcode.jpg" alt=""/></span>
+                        <em>远瞻微信公众号</em>
+                    </li>
+                    <li>
+                        <span><img src="__IMG__/qrcode.jpg" alt=""/></span>
+                        <em>远瞻手机端</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--footer结束-->
+    <script src="__JS__/sea.js"></script>
+    <script type="text/javascript">
+        seajs.config({
+            alias : {
+                jq : 'jquery-1.11.1.min',
+                jslide : 'jquery.SuperSlide.2.1.1',
+                main : 'main',
+                layer: '__JS__/../layer/layer'
+            },
+            preload : ['jq','jslide','layer']
+        });
+        seajs.use('main');
+    </script>
+</body>
+</html>
+
