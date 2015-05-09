@@ -20,13 +20,13 @@
             <div class="cont_t">
                 <div class="cont_tl s_01"></div>
                 <div class="cont_tr">
-                    <a href="#" title="查看更多"></a>
+                    <a href="{:U('Video/index')}" title="查看更多"></a>
                 </div>
             </div>
             <div class="video_list">
                 <ul>
                     <volist name="video_list" id="vo">
-                    <li data-url="http://player.youku.com/player.php/sid/XNzMyNTMxNjg0/v.swf">
+                    <li data-url="{$vo.url}">
                         <div class="box">
                             <img src="{:get_default_img($vo['image_id'])}" alt="{$vo.title}"/>
                         </div>
@@ -47,7 +47,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_02"></div>
                         <div class="cont_tr">
-                            <a href="#" title="查看更多"></a>
+                            <a href="{:U('News/index','cid=2')}" title="查看更多"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -72,7 +72,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_03"></div>
                         <div class="cont_tr">
-                            <a href="#" title="查看更多"></a>
+                            <a href="{:U('News/index','cid=4')}" title="查看更多"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -102,71 +102,23 @@
             <div class="cont_t">
                 <div class="cont_tl s_04"></div>
                 <div class="cont_tr">
-                    <a href="#" title="查看更多"></a>
+                    <a href="{:U('Product/index')}" title="查看更多"></a>
                 </div>
             </div>
             <div class="cont_h3_ul">
                 <ul>
+                    <volist name="pro_list" id="vo">
                     <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="__IMG__/pic_09.jpg" alt=""/>
+                        <a href="{$vo.url}" title="{$vo.description}" target="_blank">
+                            <img src="{:get_default_img($vo['image_id'])}" alt="{$vo.title}"/>
                             <div class="mask"></div>
                             <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
+                                <span>{$vo.title}</span>
+                                <em>{$vo.ename}</em>
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="__IMG__/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="__IMG__/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="__IMG__/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="__IMG__/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="__IMG__/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
+                    </volist>
                 </ul>
             </div>
         </div>

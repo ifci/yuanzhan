@@ -14,7 +14,8 @@ class ProductController extends BaseController {
     public function index(){
         $P = M("Product");
         $C = M("Category");
-        $cid=I('get.cid');
+        /*$cid=I('get.cid');*/
+        /*echo $cid;*/
         if($cid){
             $map['p.cid']=$cid;
         }
@@ -29,7 +30,7 @@ class ProductController extends BaseController {
         $this->assign("page", $showPage);
         $list=$P->table($P->getTableName().' p')
             ->join($C->getTableName().' c on c.cid=p.cid')
-            ->field('p.id,p.cid,p.image_id,p.price,p.psize,p.title,p.summary,p.update_time,p.click,c.name as cname')
+            ->field('p.id,p.cid,p.image_id,p.price,p.psize,p.title,p.ename,p.url,p.description,p.update_time,p.click,c.name as cname')
             ->where($map)->order('id desc')->limit("$page->firstRow, $page->listRows")->select();
         $this->assign("list", $list);
         $this->assign("ad_info", $this->getAd());

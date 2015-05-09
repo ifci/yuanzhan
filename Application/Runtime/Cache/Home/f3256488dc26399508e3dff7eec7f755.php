@@ -10,7 +10,7 @@
     <meta name="description" content="<?php echo ($site["description"]); ?>,<?php echo ($info['description']); ?>">
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
-    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|/yuanzhan/Public/Home/css/index.css|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
 </head>
 
 <body>

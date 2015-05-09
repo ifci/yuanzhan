@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2015 JKD TEAM (9koudai.net)
+ * @Author: fcdcyy@sina.cn
+ *
+ * @DateTime: 2015-03-23 09:09:49
+ */
+.pro_list {
+  width: 1200px;
+  margin: auto;
+  padding-bottom: 50px; }
+
+.pro_list_t {
+  background: #212121;
+  height: 44px;
+  line-height: 42px;
+  color: #f6f602;
+  padding: 0 38px; }
+  .pro_list_t i {
+    font-size: 30px;
+    vertical-align: middle;
+    font-family: Impact; }
+  .pro_list_t span {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 5px; }
+
+.pro_list_b {
+  text-align: center; }
+  .pro_list_b li {
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    width: 25%;
+    margin-top: 30px;
+    padding-bottom: 24px; }
+  .pro_list_b a:hover {
+    color: #212121;
+    text-decoration: underline; }
+  .pro_list_b span {
+    display: block; }
+  .pro_list_b em {
+    display: block;
+    margin-top: 5px; }
+  .pro_list_b .box {
+    width: 280px;
+    height: 80px;
+    overflow: hidden; }
+    .pro_list_b .box img {
+      max-width: 100%; }
+
+.pro_list_t {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle; }
+
+.pro_list_b ul {
+  zoom: 1; }
+  .pro_list_b ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+.pro_list_b li {
+  float: left; }
+
+/*# sourceMappingURL=combo.css.map */

@@ -16,10 +16,14 @@ solid #e2e0e0}.paging a, .paging
 span{padding:5px
 10px;margin-left:5px}.paging a:hover, .paging
 span{background:#6d6d6d;border:1px
-solid #666;color:#fff}.layer-shade{background:#000;opacity: .3;filter:alpha(opacity=30);position:fixed;width:100%;height:100%;top:0;left:0;z-index:99}body{font-family:Microsoft yahei}.nav ul
-span{font-family:Arial}.paging a, .paging
-span{display:inline-block;*display:inline;zoom:1;vertical-align:middle}#header,#footer{min-width:1200px}#footer,.footer_nav{zoom:1}#footer:after,.footer_nav:after{content:".";display:block;height:0;clear:both;visibility:hidden}.nav ul li, .footer_l, .footer_nav li, .footer_r
-li{float:left}.nav,.footer_r{float:right}.bannerBox{min-width:1200px;width:100%;height:680px;margin:auto;overflow:hidden;position:relative}.bannerBox>.hd{width:100%;height:40px;overflow:hidden;position:absolute;left:0px;bottom:0px;z-index:1;text-align:center}.bannerBox > .hd
+solid #666;color:#fff}.bread{width:1200px;margin:70px
+auto 0}.bread_t{color:#999}.bread_t
+i{width:8px;height:14px;background-position:0 -137px}.bread_t
+a{color:#999}.bread_t a:hover{color:#333}body{font-family:Microsoft yahei}.nav ul
+span{font-family:Arial}.bread_t
+i{background-image:url(/yuanzhan/Public/Home/images/icon.png);background-repeat:no-repeat}.paging a, .paging span, .bread_t
+i{display:inline-block;*display:inline;zoom:1;vertical-align:middle}#header,#footer{min-width:1200px}#footer,.footer_nav,.bread{zoom:1}#footer:after,.footer_nav:after,.bread:after{content:".";display:block;height:0;clear:both;visibility:hidden}.nav ul li, .footer_l, .footer_nav li, .footer_r
+li{float:left}.nav,.footer_r,.bread_t{float:right}.bannerBox{min-width:1200px;width:100%;height:680px;margin:auto;overflow:hidden;position:relative}.bannerBox>.hd{width:100%;height:40px;overflow:hidden;position:absolute;left:0px;bottom:0px;z-index:1;text-align:center}.bannerBox > .hd
 ul{zoom:1}.bannerBox > .hd ul
 li{display:inline-block;*display:inline;zoom:1;width:14px;height:14px;font-size:0;font-weight:bold;margin:5px
 15px 0 0;border-radius:50%;background:#222;opacity: .8;color:#fff;box-shadow:0 0 5px;cursor:pointer}.bannerBox > .hd ul

@@ -10,7 +10,7 @@
     <meta name="description" content="<?php echo ($site["description"]); ?>,<?php echo ($info['description']); ?>">
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
-    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|/yuanzhan/Public/Home/css/index.css|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -63,12 +63,12 @@
             <div class="cont_t">
                 <div class="cont_tl s_01"></div>
                 <div class="cont_tr">
-                    <a href="#" title="查看更多"></a>
+                    <a href="<?php echo U('Video/index');?>" title="查看更多"></a>
                 </div>
             </div>
             <div class="video_list">
                 <ul>
-                    <?php if(is_array($video_list)): $i = 0; $__LIST__ = $video_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li data-url="http://player.youku.com/player.php/sid/XNzMyNTMxNjg0/v.swf">
+                    <?php if(is_array($video_list)): $i = 0; $__LIST__ = $video_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li data-url="<?php echo ($vo["url"]); ?>">
                         <div class="box">
                             <img src="<?php echo get_default_img($vo['image_id']);?>" alt="<?php echo ($vo["title"]); ?>"/>
                         </div>
@@ -88,7 +88,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_02"></div>
                         <div class="cont_tr">
-                            <a href="#" title="查看更多"></a>
+                            <a href="<?php echo U('News/index','cid=2');?>" title="查看更多"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -111,7 +111,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_03"></div>
                         <div class="cont_tr">
-                            <a href="#" title="查看更多"></a>
+                            <a href="<?php echo U('News/index','cid=4');?>" title="查看更多"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -139,71 +139,21 @@
             <div class="cont_t">
                 <div class="cont_tl s_04"></div>
                 <div class="cont_tr">
-                    <a href="#" title="查看更多"></a>
+                    <a href="<?php echo U('Product/index');?>" title="查看更多"></a>
                 </div>
             </div>
             <div class="cont_h3_ul">
                 <ul>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="/yuanzhan/Public/Home/images/pic_09.jpg" alt=""/>
+                    <?php if(is_array($pro_list)): $i = 0; $__LIST__ = $pro_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                        <a href="<?php echo ($vo["url"]); ?>" title="<?php echo ($vo["description"]); ?>" target="_blank">
+                            <img src="<?php echo get_default_img($vo['image_id']);?>" alt="<?php echo ($vo["title"]); ?>"/>
                             <div class="mask"></div>
                             <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
+                                <span><?php echo ($vo["title"]); ?></span>
+                                <em><?php echo ($vo["ename"]); ?></em>
                             </div>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="/yuanzhan/Public/Home/images/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="/yuanzhan/Public/Home/images/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="/yuanzhan/Public/Home/images/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="/yuanzhan/Public/Home/images/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" title="" target="_blank">
-                            <img src="/yuanzhan/Public/Home/images/pic_09.jpg" alt=""/>
-                            <div class="mask"></div>
-                            <div class="box">
-                                <span>wellist</span>
-                                <em>在线定制家庭护理服务工具</em>
-                            </div>
-                        </a>
-                    </li>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>

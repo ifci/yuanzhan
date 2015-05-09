@@ -10,6 +10,10 @@ class IndexController extends BaseController {
         $M = M("Video");
         $video_list = $M -> field('id,title,url,image_id') -> where('status=1') -> order('id desc') -> limit(3) -> select();
         $this->assign("video_list", $video_list);
+
+        $P = M("Product");
+        $pro_list = $P -> field('id,title,ename,url,image_id,description') -> where('status=1') -> order('id desc') -> limit(8) -> select();
+        $this->assign("pro_list", $pro_list);
         $this->display();
     }
 

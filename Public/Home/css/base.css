@@ -207,16 +207,21 @@ section, article, aside, header, footer, nav, dialog, figure {
     border: 1px solid #666;
     color: #fff; }
 
-.layer-shade {
-  background: #000;
-  opacity: .3;
-  filter: alpha(opacity=30);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99; }
+/*面包屑导航*/
+.bread {
+  width: 1200px;
+  margin: 70px auto 0; }
+
+.bread_t {
+  color: #999; }
+  .bread_t i {
+    width: 8px;
+    height: 14px;
+    background-position: 0 -137px; }
+  .bread_t a {
+    color: #999; }
+    .bread_t a:hover {
+      color: #333; }
 
 body {
   font-family: Microsoft yahei; }
@@ -224,7 +229,11 @@ body {
 .nav ul span {
   font-family: Arial; }
 
-.paging a, .paging span {
+.bread_t i {
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat; }
+
+.paging a, .paging span, .bread_t i {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -233,9 +242,9 @@ body {
 #header, #footer {
   min-width: 1200px; }
 
-#footer, .footer_nav {
+#footer, .footer_nav, .bread {
   zoom: 1; }
-  #footer:after, .footer_nav:after {
+  #footer:after, .footer_nav:after, .bread:after {
     content: ".";
     display: block;
     height: 0;
@@ -245,7 +254,7 @@ body {
 .nav ul li, .footer_l, .footer_nav li, .footer_r li {
   float: left; }
 
-.nav, .footer_r {
+.nav, .footer_r, .bread_t {
   float: right; }
 
 /*# sourceMappingURL=base.css.map */

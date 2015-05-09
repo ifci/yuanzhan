@@ -7,7 +7,7 @@
  */
 return array(
     'T_HOME'=>'首页',
-    'T_PRODUCT'=>'产品中心',
+    'T_PRODUCT'=>'投资组合',
     'T_PRODUCT_CONTENT'=>'产品详情',
     'T_PRODUCT_ABOUT'=>'产品简介',
     'T_PRODUCT_DETAIL'=>'产品信息',
