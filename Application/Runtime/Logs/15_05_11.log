@@ -5276,3 +5276,2464 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2015-05-11T18:02:08+08:00 ] 127.0.0.1 /yuanzhan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.005000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+SQL: SHOW COLUMNS FROM `jkd_ad` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `jkd_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'index' ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `jkd_video` [ RunTime:0.007000s ]
+SQL: SELECT `id`,`title`,`url`,`image_id` FROM `jkd_video` WHERE ( status=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `jkd_product` [ RunTime:0.007000s ]
+SQL: SELECT `id`,`title`,`ename`,`url`,`image_id`,`description` FROM `jkd_product` WHERE ( status=1 ) ORDER BY id desc LIMIT 8   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\4c169d1beb682410761268f13d1beb68.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\4c169d1beb682410761268f13d1beb68.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\4c169d1beb682410761268f13d1beb68.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.009000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_images` [ RunTime:0.006000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 87 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 88 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 89 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.008001s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( cid=2 AND status=1 AND lang='zh-cn' ) ORDER BY published DESC LIMIT 4   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 96 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 94 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 92 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 90 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 3 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 4 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 5 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 6 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 7 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 8 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 30 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 31 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 32 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 33 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 34 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 35 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 36 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 37 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 38 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 39 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 40 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 41 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 42 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 43 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 44 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 45 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 46 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 47 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 48 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 49 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( cid=4 AND status=1 AND lang='zh-cn' ) ORDER BY published DESC LIMIT 4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 99 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 98 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 105 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 104 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 103 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 102 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 101 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 100 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.095005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:02:08+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.013001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:02:09+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 8 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.010001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 26 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 26 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 26 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: webtitle D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined variable: webtitle D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.013001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.007000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:02:10+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:03:55+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.010000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.010000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:03:55+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:09:00+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.008000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-11T18:09:00+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:11:16+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:11:33+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:11:38+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.007000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.007001s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:11:39+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:13:09+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.011001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.011001s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:13:10+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.012001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:14:50+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.006001s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.007000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:14:50+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.010001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:14:51+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: where D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 37 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 113 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+SQL: SHOW COLUMNS FROM `jkd_category` [ RunTime:0.010000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::limit(), called in D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php on line 68 and defined D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1630 行.
+NOTIC: [8] Undefined variable: offset D:\www\yuanzhan\include\Library\Think\Model.class.php 第 1631 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( lang='zh-cn'  AND type='n' AND pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=2 ) ORDER BY cid DESC  [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_category` WHERE ( pid=4 ) ORDER BY cid DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.008000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( status=1 AND lang='zh-cn' ) ORDER BY click DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 106 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:14:51+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:15:00+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.011001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.002000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 78 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.003000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:15:01+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.010000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:15:01+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 78 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 92 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:15:01+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:15:36+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.009001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-05-11T18:15:37+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.011001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.002000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-05-11T18:15:37+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:15:38+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:00+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:00+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.010000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:16:00+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.010001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:01+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.010001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:08+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:09+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.011001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.002000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:09+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.010001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.002000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:16:10+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.009001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:16:29+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: list D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 104 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:16:29+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.008000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:13+08:00 ] 127.0.0.1 /yuanzhan/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.005000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+SQL: SHOW COLUMNS FROM `jkd_ad` [ RunTime:0.009000s ]
+SQL: SELECT * FROM `jkd_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'index' ) ORDER BY sort DESC  [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `jkd_video` [ RunTime:0.008000s ]
+SQL: SELECT `id`,`title`,`url`,`image_id` FROM `jkd_video` WHERE ( status=1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jkd_product` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`title`,`ename`,`url`,`image_id`,`description` FROM `jkd_product` WHERE ( status=1 ) ORDER BY id desc LIMIT 8   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\4c169d1beb682410761268f13d1beb68.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\4c169d1beb682410761268f13d1beb68.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\4c169d1beb682410761268f13d1beb68.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_images` [ RunTime:0.008001s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 87 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 88 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 89 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.008000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( cid=2 AND status=1 AND lang='zh-cn' ) ORDER BY published DESC LIMIT 4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 96 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 94 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 92 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 90 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 3 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 4 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 5 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 6 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 7 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 8 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 9 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 10 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 11 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 12 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 24 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 25 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 26 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 27 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 28 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 29 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 30 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 31 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 32 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 33 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 34 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 35 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 36 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 37 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 38 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 39 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 40 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 41 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 42 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 43 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 44 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 45 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 46 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 47 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 48 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 49 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( cid=4 AND status=1 AND lang='zh-cn' ) ORDER BY published DESC LIMIT 4   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 99 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 98 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 13 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 14 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 15 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 16 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 17 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 18 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 19 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 20 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 21 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined offset: 22 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined offset: 23 D:\www\yuanzhan\Application\Common\Common\function.php 第 247 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 104 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 103 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 102 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 101 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 100 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:13+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.009000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.002001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:19+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:26:22+08:00 ] 127.0.0.1 /yuanzhan/Video/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.001000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+SQL: SHOW COLUMNS FROM `jkd_video` [ RunTime:0.010000s ]
+SQL: SELECT `id`,`title`,`url`,`content`,`status`,`image_id`,`published` FROM `jkd_video` WHERE ( status=1 ) ORDER BY id desc LIMIT 7   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jkd_ad` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `jkd_ad` WHERE ( `lang` = 'zh-cn' ) AND ( `position` = 'all' ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Template/default/Base/header.html): failed to open stream: No such file or directory D:\www\yuanzhan\include\Library\Think\Template.class.php 第 696 行.
+NOTIC: [2] file_get_contents(./Template/default/Base/inside.html): failed to open stream: No such file or directory D:\www\yuanzhan\include\Library\Think\Template.class.php 第 696 行.
+NOTIC: [2] file_get_contents(./Template/default/Base/footer.html): failed to open stream: No such file or directory D:\www\yuanzhan\include\Library\Think\Template.class.php 第 696 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\da06b6f48c674e400a6fb65522e9a3b4.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\da06b6f48c674e400a6fb65522e9a3b4.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\da06b6f48c674e400a6fb65522e9a3b4.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_images` [ RunTime:0.008001s ]
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 87 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 88 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 89 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT `savepath` FROM `jkd_images` WHERE ( `id` = 77 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SHOW COLUMNS FROM `jkd_news` [ RunTime:0.010000s ]
+SQL: SELECT `id`,`cid`,`title`,`update_time`,`image_id`,`status`,`published`,`summary`,`url` FROM `jkd_news` WHERE ( is_recommend=1 and cid=58 AND status=1 AND lang='zh-cn' ) ORDER BY id DESC LIMIT 8   [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\Application\Runtime\Cache\Home\da06b6f48c674e400a6fb65522e9a3b4.php 第 121 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:22+08:00 ] 127.0.0.1 /yuanzhan/Public/Home/images/jkd_40.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.009001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:22+08:00 ] 127.0.0.1 /yuanzhan/Base/verify_code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:23+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-11T18:26:31+08:00 ] 127.0.0.1 /yuanzhan/Team/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.007000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+NOTIC: [8] Undefined index: limit D:\www\yuanzhan\include\Library\Think\Template\TagLib\Weblock.class.php 第 88 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 10 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jkd_nav` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='top' AND parent_id=0 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=56 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=61 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=57 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: b_url D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 54 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: details D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 55 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 68 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 74 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+NOTIC: [8] Undefined variable: cv D:\www\yuanzhan\Application\Runtime\Cache\Home\aa3fbf731b6ea9b8152430e75768ca33.php 第 80 行.
+NOTIC: [8] Undefined index: m D:\www\yuanzhan\include\Common\functions.php 第 885 行.
+SQL: SELECT * FROM `jkd_nav` WHERE ( lang='zh-cn'  AND type='bottom' AND parent_id=0 ) ORDER BY sort ASC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=62 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=63 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=64 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=65 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `jkd_nav` WHERE ( parent_id=66 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-11T18:26:31+08:00 ] 127.0.0.1 /yuanzhan/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\www\yuanzhan\include\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `jkd_company` [ RunTime:0.006001s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `jkd_company`
+SQL: SELECT * FROM `jkd_company`  [ RunTime:0.000000s ]
+ERR: 1146:Table 'yuanzhan.jkd_company' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `jkd_company` 
+INFO: [ view_parse ] --START--
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\www\yuanzhan\include\Library\Think\Template.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\yuanzhan\include\Library\Think\Template.class.php 第 170 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

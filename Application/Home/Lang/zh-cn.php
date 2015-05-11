@@ -18,6 +18,7 @@ return array(
     'T_SERVICE'=>'服务介绍',
     'T_CASE'=>'学员案例',
     'T_VIDEO'=>'课程试听',
+    'T_TEAM'=>'投资团队',
     'T_INTRODUCE'=>'九口袋介绍',
     'T_CONNECT'=>'联系我们',
     'T_ABOUT_US'=>'关于我们',
