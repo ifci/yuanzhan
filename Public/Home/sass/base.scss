@@ -306,21 +306,27 @@ section, article, aside, header, footer, nav, dialog, figure {
 /*分页样式*/
 .paging{
   @include align;
-  a{
+  margin-top: 50px;
+  @include fz(16px);
+  em,a{
     @extend %inline;
-    @include border(#e2e0e0);
+    @include border(#e0e0e0);
+    color: #666;
+  }
+  a:hover{
+    color: #333;
+    @include border(#333);
+  }
+  span{
+    background: #333;
+    color: #fff;
   }
   span{
     @extend %inline;
   }
-  a,span{
+  em,a,span{
     padding: 5px 10px;
     margin-left: 5px;
-  }
-  a:hover,span{
-    background: #6d6d6d;
-    @include border(#666);
-    color: #fff;
   }
 }
 
@@ -347,7 +353,6 @@ section, article, aside, header, footer, nav, dialog, figure {
     }
   }
 }
-
 
 
 %ffst{  //宋体

@@ -10,7 +10,7 @@
     <meta name="description" content="<?php echo ($site["description"]); ?>,<?php echo ($info['description']); ?>">
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
-    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -43,48 +43,71 @@
 
 
 
-
-
-
 <!--content开始-->
     <div id="content">
-        
-        <!-- 案例 -->
-        <div class="introduction bgf8 pb30">
-            <div class="main_t center tac">
-                <b><?php echo L('T_NEWS');?></b>
+        <div class="bread">
+    <div class="bread_t">
+        <i></i>
+        <span>当前位置：</span>
+        <a href="/yuanzhan/" title="首页">首页</a>
+        |
+        <a href="<?php echo U($b_url);?>" title="<?php echo ($webtitle); ?>"><?php echo ($webtitle); ?></a>
+        <?php if($details == 1): ?>|
+        <a href="/yuanzhan/News/index/id/2.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
+    </div>
+</div>
+        <div class="main_t">
+            <div class="main_c">
+                <b>NEWS</b>
+                <em>新闻动态</em>
             </div>
-            <ul class="case center">
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-                    <div class="case_ty6 clearfix">
-                        <div class="w50 fl">
-                            <?php echo ($vo["title"]); ?>
-                        </div>
+        </div>
+        <div class="news center">
+            <div class="news_l">
+    <ul class="news_cat">
+        <?php $__m_cat=M("category");$__cat_list=$__m_cat->where("lang='zh-cn'  AND type='n' AND pid=1")->limit()->select();foreach($__cat_list as $_ck=>$_cv):$cid=$_cv['cid'];$child=$__m_cat->where('pid='.$cid)->order('cid DESC')->select();extract($_cv); $cv = $_GET['id'] ? $_GET['id'] : 2; ?>
+        <li class="<?php if($cv == $cid): ?>news_on<?php endif; ?>">
+            <a href="<?php echo U('News/index',array('id'=>$cid));?>" title="">
+                <i></i>
+                <span><?php echo ($name); ?></span>
+                <em>>></em>
+            </a>
+        </li><?php endforeach; ?>
 
-                        <div class="w50 tar fl">
-                            发表日期：<?php echo date('Y/m/d',$vo['published']);?>
-                        </div>
-                    </div>
-                    <a href='<?php echo U('news/read',array('id'=>$vo['id']));?>' title="">
-                        <div class="case_ty1 clearfix">
-                            <div class="case_ty2 fl wimg">
-                                <img src="<?php echo get_default_img($vo['image_id']);?>" alt="" />
-                            </div>
-                            <div class="case_ty3 case_ty8 fl">
-                                <?php echo ($vo["summary"]); ?>
-                            </div>
-                        </div>
-                    </a>
-                </li><?php endforeach; endif; else: echo "" ;endif; ?>
-
-                <div class="tac">
-                    <?php echo ($page); ?>
-                </div>
+        <li class="news_rcm">
+            <div class="news_rcm_t">
+                <i></i>
+                <span>推荐新闻</span>
+            </div>
+            <ul>
+                <?php $__m_news=M("news"); $_news_list=$__m_news ->field("id,cid,title,update_time,image_id,status,published,summary,url") ->where("status=1 AND lang='zh-cn'") ->order("click DESC") ->limit(8) ->select(); foreach ($_news_list as $key=>$new):?><li>
+                    <a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title="<?php echo $new['title'];?>"><?php echo cutStr($new['title'],24,0);?></a>
+                </li><?php endforeach;?>
             </ul>
+        </li>
+    </ul>
+</div>
+            <div class="news_r news_list">
+                <ul>
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                        <div class="news_box">
+                            <a href="<?php echo U('news/read',array('id'=>$vo['id']));?>" title=""><img src="<?php echo get_default_img($vo['image_id']);?>" alt=""/></a>
+                        </div>
+                        <div class="news_tit">
+                            <span><a href="/yuanzhan/news/read/id/39.html" title=""><?php echo ($vo["title"]); ?></a></span>
+                            <i>UPDATA：<?php echo date('Y/m/d',$vo['published']);?></i>
+                            <em><a href="/yuanzhan/news/read/id/39.html" title=""><?php echo ($vo["summary"]); ?></a></em>
+                        </div>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
+
+                </ul>
+
+                <!--分页-->
+                <?php echo ($page); ?>
+            </div>
         </div>
     </div>
     <!--content结束-->
-
 
 
 <!--footer开始-->

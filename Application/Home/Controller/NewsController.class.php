@@ -14,11 +14,12 @@ class NewsController extends BaseController {
     public function index(){
         $N = M("News");
         $C = M("Category");
-        /*$cid=I('get.cid');
+        $cid=I('get.id');
         if($cid){
             $map['n.cid']=$cid;
-        }*/
-        $map['n.cid']=58;
+        }else{
+            $map['n.cid']=2;
+        }
         $map['n.status']=1;
         $map['n.lang']=LANG_SET;
         $count = $N->table($N->getTableName().' n')
@@ -41,11 +42,10 @@ class NewsController extends BaseController {
      * 详情页
      */
     public function read(){
-        $this->assign("ad_info", $this->getAd());
         $this->assign('details', 1);
 
         $id=I('get.id');
-        $m_news=M('news');
+        $m_news=M('News');
         if(!$id){$this->_empty($id);}
         $map['id']=$id;
         if($info=$m_news->where($map)->find()){
@@ -73,6 +73,7 @@ class NewsController extends BaseController {
             $this->assign('auther',$this->getAuther($info['aid']));
             $m_news->where($map)->setInc('click',1);
             $this->assign('webtitle',L('T_NEWS'));
+
             $this->display();
         }else{
             $this->_empty($id);

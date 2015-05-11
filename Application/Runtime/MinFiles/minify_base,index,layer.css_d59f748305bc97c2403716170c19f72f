@@ -10,18 +10,18 @@ li{border-left:2px solid #a4a4a4;line-height:1;padding:0
 5px}.footer_nav li:first-child{border:none;padding-left:0}.footer_tel{font-size:16px}.footer_r{margin-top:46px}.footer_r
 li{margin-left:30px;text-align:center;color:#ccc;width:146px}.footer_r li
 span{display:block;width:100%;height:146px;overflow:hidden}.footer_r li
-em{display:block;height:40px;line-height:3;overflow:hidden}.paging{text-align:center}.paging
+em{display:block;height:40px;line-height:3;overflow:hidden}.paging{text-align:center;margin-top:50px;font-size:16px}.paging em, .paging
 a{border:1px
-solid #e2e0e0}.paging a, .paging
+solid #e0e0e0;color:#666}.paging a:hover{color:#333;border:1px
+solid #333}.paging
+span{background:#333;color:#fff}.paging em, .paging a, .paging
 span{padding:5px
-10px;margin-left:5px}.paging a:hover, .paging
-span{background:#6d6d6d;border:1px
-solid #666;color:#fff}.bread{width:1200px;margin:70px
+10px;margin-left:5px}.bread{width:1200px;margin:70px
 auto 0}.bread_t{color:#999}.bread_t
 i{width:8px;height:14px;background-position:0 -137px}.bread_t
 a{color:#999}.bread_t a:hover{color:#333}body{font-family:Microsoft yahei}.nav ul
 span{font-family:Arial}.bread_t
-i{background-image:url(/yuanzhan/Public/Home/images/icon.png);background-repeat:no-repeat}.paging a, .paging span, .bread_t
+i{background-image:url(/yuanzhan/Public/Home/images/icon.png);background-repeat:no-repeat}.paging em, .paging a, .paging span, .bread_t
 i{display:inline-block;*display:inline;zoom:1;vertical-align:middle}#header,#footer{min-width:1200px}#footer,.footer_nav,.bread{zoom:1}#footer:after,.footer_nav:after,.bread:after{content:".";display:block;height:0;clear:both;visibility:hidden}.nav ul li, .footer_l, .footer_nav li, .footer_r
 li{float:left}.nav,.footer_r,.bread_t{float:right}.bannerBox{min-width:1200px;width:100%;height:680px;margin:auto;overflow:hidden;position:relative}.bannerBox>.hd{width:100%;height:40px;overflow:hidden;position:absolute;left:0px;bottom:0px;z-index:1;text-align:center}.bannerBox > .hd
 ul{zoom:1}.bannerBox > .hd ul

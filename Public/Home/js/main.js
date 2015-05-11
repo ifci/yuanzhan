@@ -101,5 +101,17 @@ define(function (require, exports, module) {
                 });
             }, 1000);
         });
+
+        /*新闻详情页*/
+        $(".zoom em").on('click', function(){
+            var $index = $(this).index();
+            var txt = $('.news_con .txt');
+            var fz = parseInt(txt.css('font-size'));
+            if($index === 0 && fz > 12){
+                txt.css('font-size', fz - 2);
+            }else if($index === 1 && fz < 18){
+                txt.css('font-size', parseInt(fz) + 2);
+            }
+        })
     })
 });

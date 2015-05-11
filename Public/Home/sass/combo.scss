@@ -113,6 +113,291 @@ $lcolor: #005ea7;   //链接颜色
 }
 
 
+.main_t{
+  @extend %center;
+}
+.main_c{
+  background: #212121;
+  margin-top: -46px;
+  height: 44px;
+  line-height: 42px;
+  @include border(#e0e0e0);
+  width: 288px;
+  @include align;
+  color: $color;
+  b{
+    font-size: 30px;
+    vertical-align: middle;
+    font-family: Impact;
+  }
+  em{
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
+//新闻动态
+.news{
+  @include bor(top,#f1f1f1);
+  padding: 30px 0 50px;
+  margin-top: 30px;
+  @extend %clearfix;
+}
+.news_l{
+  @extend %fl;
+  width: 290px;
+}
+.news_cat{
+  @include fz(18px);
+  & > li{
+    width: 100%;
+    @include border(#e2e2e2);
+    margin-bottom: 20px;
+    &:hover,&.news_on{
+      @include border(#313131);
+      em{
+        color: #313131;
+      }
+      span{
+        color: #666;
+      }
+    }
+    i{
+      display: block;
+      @extend %fl;
+      width: 8px;
+      height: 8px;
+      background: #212121;
+      margin: 10px 0 0 20px;
+    }
+    span{
+      display: block;
+      @extend %fl;
+      margin-left: 10px;
+      color: #666;
+    }
+    em{
+      display: block;
+      @extend %fr,%ffst;
+      margin: 4px 20px 0 0;
+      line-height: 1;
+      color: #999;
+    }
+  }
+  a{
+    display: block;
+    @extend %clearfix;
+    padding: 8px 0;
+  }
+}
+
+li.news_rcm{
+  &:hover{
+    @include border(#e2e2e2);
+  }
+  ul{
+    @include bor(top,#f1f1f1);
+    padding: 10px;
+    @include fz(16px);
+  }
+  a{
+    @extend %nowrap;
+    &:hover{
+      color: #333;
+      text-decoration: underline;
+    }
+  }
+}
+.news_rcm_t{
+  @extend %clearfix;
+  padding: 8px 0;
+}
+.news_r {
+  width: 880px;
+  @extend %fr;
+}
+.news_list{
+  li{
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px dashed #dfdfdf;
+    @extend %clearfix;
+    &:first-child{
+      margin-top: 0;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+  .news_box{
+    @extend %fl;
+    @include border(#e0e0e0);
+    width: 118px;
+    height: 82px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .news_tit{
+    @extend %fr;
+    width: 748px;
+    span{
+      @include fz(16px);
+      display: block;
+      a{
+        @extend %nowrap;
+        color: #333;
+      }
+    }
+    i{
+      color: #999;
+      display: block;
+      padding: 4px 0;
+      @extend %nowrap;
+    }
+    em{
+      @include fz(14px);
+      display: block;
+      height: 38px;
+      overflow: hidden;
+      a{
+        color: #666;
+      }
+    }
+  }
+}
+
+
+/*新闻详情*/
+.news_con{
+  .tit{
+    @include align;
+    @include fz(18px);
+    color: #333;
+  }
+  .dcz{
+    @extend %clearfix;
+    margin-top: 16px;
+    i{
+      @extend %inline,%icon;
+      width: 17px;
+      height: 13px;
+    }
+    span{
+      @extend %inline;
+      color: #999;
+    }
+  }
+  .date{
+    margin-left: 348px;
+    @extend %fl;
+    i{
+      background-position: -11px -138px;
+    }
+  }
+  .click{
+    margin-left: 50px;
+    @extend %fl;
+    i{
+      background-position: -27px -138px;
+    }
+  }
+  .zoom{
+    @extend %fr;
+    em{
+      margin-right: 20px;
+      @extend %inline,%ffst;
+      @include fz(14px);
+      width: 22px;
+      height: 22px;
+      @include border(#c6cdd5);
+      cursor: pointer;
+      @include align;
+      &:hover{
+        background: #c6cdd5;
+        color: #fff;
+      }
+    }
+  }
+  .txt{
+    @include fz(14px);
+    @include bor(top,#f1f1f1);
+    line-height: 2;
+    padding: 10px;
+    margin-top: 26px;
+    p{
+      text-indent: 2em;
+    }
+    img{
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  }
+  .news_bs{
+    line-height: 30px;
+    @include border(#e9e9e9);
+    @extend %clearfix;
+    .share{
+      @extend %fl;
+      @include fz(14px);
+      margin-left: 10px;
+    }
+    .back{
+      @extend %fr;
+      margin-right: 10px;
+      &:hover{
+        span,a {
+          color: #000;
+        }
+        i {
+          background-position: -15px -156px;
+        }
+      }
+      i{
+        @extend %inline,%icon;
+        width: 12px;
+        height: 12px;
+        background-position: 0 -156px;
+      }
+    }
+  }
+  .news_np{
+    margin-top: 18px;
+    @include fz(14px);
+    & > div{
+      @extend %clearfix;
+      margin-top: 10px;
+      a{
+        &:hover{
+          color: #000;
+          i{
+            background: #000;
+          }
+          span{
+            color: #000;
+          }
+        }
+      }
+      i{
+        display: block;
+        @extend %fl;
+        width: 3px;
+        height: 14px;
+        background: #999;
+        color: #999;
+      }
+      span{
+        margin-left: 16px;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+
+
+
 %ffst{  //宋体
   font-family: SimSun;
 }

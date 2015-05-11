@@ -38,8 +38,8 @@ return array(
     ),
 
     'header' => '<span class="rows">共 %TOTAL_ROW% 条记录</span>',
-    'prev'   => '<<',
-    'next'   => '>>',
+    'prev'   => '<',
+    'next'   => '>',
     'first'  => '1...',
     'last'   => '...%TOTAL_PAGE%',
     'theme'  => '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%',

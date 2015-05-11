@@ -43,91 +43,97 @@
 
 
 
+<!--content开始-->
+<div id="content">
+    <div class="bread">
+    <div class="bread_t">
+        <i></i>
+        <span>当前位置：</span>
+        <a href="/yuanzhan/" title="首页">首页</a>
+        |
+        <a href="<?php echo U($b_url);?>" title="<?php echo ($webtitle); ?>"><?php echo ($webtitle); ?></a>
+        <?php if($details == 1): ?>|
+        <a href="/yuanzhan/news/read/id/38.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
+    </div>
+</div>
+    <div class="main_t">
+        <div class="main_c">
+            <b>NEWS</b>
+            <em>新闻动态</em>
+        </div>
+    </div>
+    <div class="news center">
+        <div class="news_l">
+    <ul class="news_cat">
+        <?php $__m_cat=M("category");$__cat_list=$__m_cat->where("lang='zh-cn'  AND type='n' AND pid=1")->limit()->select();foreach($__cat_list as $_ck=>$_cv):$cid=$_cv['cid'];$child=$__m_cat->where('pid='.$cid)->order('cid DESC')->select();extract($_cv); $cv = $_GET['id'] ? $_GET['id'] : 2; ?>
+        <li class="<?php if($cv == $cid): ?>news_on<?php endif; ?>">
+            <a href="<?php echo U('News/index',array('id'=>$cid));?>" title="">
+                <i></i>
+                <span><?php echo ($name); ?></span>
+                <em>>></em>
+            </a>
+        </li><?php endforeach; ?>
 
-
-
- <!--content开始-->
-    <div id="content">
-        
-        <!-- 案例 -->
-        <div class="introduction" style="margin-top:20px;">
-            <div class="casede center clearfix">
-                <div class="categoryLeft">
-                    <div class="fatherNav">
-                        热门资讯<a href="<?php echo U('/News/');?>" title="点击查看更多新闻">查看更多>></a>
-                    </div>
-                    <div class="leftNav">
-                        <ul>
-                            <?php if(is_array($hot)): $i = 0; $__LIST__ = $hot;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-                                <a href="<?php echo U('News/read',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo ($vo["title"]); ?></a>
-                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-                    </div>
-                    <div class="leftContact">
-                        <span>九口袋在线咨询</span>
-                        <div class="tencent">
-                            <ul>
-                                <li>建站顾问：&nbsp;&nbsp;
-                                    <a href="tencent://message/?uin=<?php echo ($site["qq"]); ?>">
-                                        <img title="点击这里给我发消息" border="0" alt="点击这里给我发消息" src="http://pub.idqqimg.com/qconn/wpa/button/button_11.gif">
-                                    </a>
-                                </li>
-                                <li>技术支持：&nbsp;&nbsp;
-                                    <a href="tencent://message/?uin=<?php echo ($site["qq"]); ?>">
-                                        <img title="点击这里给我发消息" border="0" alt="点击这里给我发消息" src="http://pub.idqqimg.com/qconn/wpa/button/button_11.gif">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <span class="leftTel">
-                            咨询电话：<?php echo ($site["tel"]); ?>
-                        </span>
-                    </div>
-                    <div class="leftBottom"></div>
+        <li class="news_rcm">
+            <div class="news_rcm_t">
+                <i></i>
+                <span>推荐新闻</span>
+            </div>
+            <ul>
+                <?php $__m_news=M("news"); $_news_list=$__m_news ->field("id,cid,title,update_time,image_id,status,published,summary,url") ->where("status=1 AND lang='zh-cn'") ->order("click DESC") ->limit(8) ->select(); foreach ($_news_list as $key=>$new):?><li>
+                    <a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title="<?php echo $new['title'];?>"><?php echo cutStr($new['title'],24,0);?></a>
+                </li><?php endforeach;?>
+            </ul>
+        </li>
+    </ul>
+</div>
+        <div class="news_r news_con">
+            <div class="tit"><?php echo ($info["title"]); ?></div>
+            <div class="dcz">
+                <div class="date">
+                    <i></i>
+                    <span><?php echo (date('Y-m-d',$info['published'])); ?></span>
                 </div>
-
-
-
-
-<div style="float:left;width:730px;border:1px solid #c7c7c7;margin-bottom: 20px;">
-                <div class="casede_t tac">
-                        <b><?php echo ($info["title"]); ?></b>
-                    </div>
-                <p class="bottom">
-
-                </p>
-                    <div class="casede_c">
-                        <?php echo ($info['content']); ?>
-                    </div>
-
-                <div class="casede_b clearfix">
-                    <div class="casede_bl fl">
-                        <a href="<?php echo $prev == null ? 'javascript:':U('News/read',array('id'=>$prev[id]));?>" title="<?php echo ($prev["title"]); ?>">上一篇： <?php echo $prev[title] == null ?'没有了':$prev[title];?></a>
-
-                    </div>
-                    <div class="casede_br fr">
-                        <a href="<?php echo $next == null ? 'javascript:':U('News/read',array('id'=>$next[id]));?>" title="<?php echo ($next["title"]); ?>">下一篇： <?php echo $next[title] == null ?'没有了':$next[title];?></a>
-                    </div>
+                <div class="click">
+                    <i></i>
+                    <span><?php echo ($info['click']); ?></span>
                 </div>
-                <div class="weibo">
-                    <script type="text/javascript">
-                        (function(){
-                        var url = "http://widget.weibo.com/distribution/comments.php?width=680&url=http%3A%2F%2F9koudai.net&color=cccccc,ffffff,4c4c4c,5093d5,cccccc,33fe54&colordiy=1&dpc=1";
-                        document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:680px"></iframe>');
-                        })();
-                        </script>
-                        <script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" type="text/javascript" charset="utf-8"></script>
-                        <script type="text/javascript">
-                        window.WBComment.init({
-                            "id": "WBCommentFrame"
-                        });
-                    </script>
+                <div class="zoom">
+                    <em>A<sup>-</sup></em>
+                    <em>A<sup>+</sup></em>
                 </div>
+            </div>
+            <div class="txt">
+                <?php echo ($info['content']); ?>
+            </div>
+            <div class="news_bs">
+                <div class="share">分享到：<div class="bshare-custom" style="display:inline-block;*display:inline;zoom:1;"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=7afd94bb-a7e8-4d65-9936-979b687f14eb&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></div>
+                <div class="back">
+                    <a href="<?php echo U('News/index');?>" title="返回列表">
+                        <i></i>
+                        <span>返回列表</span>
+                    </a>
+                </div>
+            </div>
+            <div class="news_np">
+                <div>
+                    <a href="<?php echo $prev == null ? 'javascript:':U('News/read',array('id'=>$prev[id]));?>" title="<?php echo ($prev["title"]); ?>">
+                        <i></i>
+                        <span>上一篇： <?php echo $prev[title] == null ?'没有了':$prev[title];?></span>
+                    </a>
+                </div>
+                <div>
+                    <a href="<?php echo ($next["title"]); ?>" title="">
+                        <i></i>
+                        <span>下一篇： <?php echo $next[title] == null ?'没有了':$next[title];?></span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!--content结束-->
+</div>
+<!--content结束-->
+
 
 <!--footer开始-->
     <div id="footer" class="footer">

@@ -100,7 +100,7 @@
                                 <div class="news_tit">
                                     <span><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr($new['title'],24,0);?></a></span>
                                     <i>UPDATA：<?php echo (date('Y-m-d',$new['published'])); ?></i>
-                                    <em><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title="">6月17日至21日，区长方军率队赴浙江省杭州市、台州市、绍兴市、江苏省南京市等地进行招商考察……</a></em>
+                                    <em><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr(trim($new['summary']),50,0);?></a></em>
                                 </div>
                             </li><?php endforeach;?>
                         </ul>
@@ -123,7 +123,7 @@
                                     <div class="news_tit">
                                         <span><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr($new['title'],24,0);?></a></span>
                                         <i>UPDATA：<?php echo (date('Y-m-d',$new['published'])); ?></i>
-                                        <em><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title="">6月17日至21日，区长方军率队赴浙江省杭州市、台州市、绍兴市、江苏省南京市等地进行招商考察……</a></em>
+                                        <em><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr(trim($new['summary']),50,0);?></a></em>
                                     </div>
                                 </li><?php endforeach;?>
                         </ul>
