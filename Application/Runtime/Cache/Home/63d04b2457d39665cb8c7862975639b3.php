@@ -11,6 +11,7 @@
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
     <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/>
 </head>
 
 <body>
@@ -54,25 +55,27 @@
         <a href="/yuanzhan/Product/index.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
     </div>
 </div>
-<?php $__m_cat=M("category");$__cat_list=$__m_cat->where("lang='zh-cn'  AND type='p' AND pid=0")->limit()->select();foreach($__cat_list as $_ck=>$_cv):$cid=$_cv['cid'];$child=$__m_cat->where('pid='.$cid)->order('cid DESC')->select();extract($_cv);?><div class="pro_list">
-    <div class="pro_list_t">
-        <i><?php echo ($ename); ?></i>
-        <span><?php echo ($name); ?></span>
-    </div>
-    <div class="pro_list_b">
-        <ul>
-            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "此分类暂无相关信息" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo['cid'] == $cid): ?><li>
-                <a href="<?php echo ($vo['url']); ?>" title="<?php echo $vo['description'];?>" target="_blank">
-                    <div class="box">
-                        <img src="<?php echo get_default_img($vo['image_id']);?>" alt="<?php echo $vo['description'];?>"/>
-                    </div>
-                    <span><?php echo ($vo["title"]); ?></span>
-                    <em><?php echo ($vo["ename"]); ?></em>
-                </a>
-            </li><?php endif; endforeach; endif; else: echo "此分类暂无相关信息" ;endif; ?>
-        </ul>
-    </div>
-</div><?php endforeach; ?>
+<div class="pro_con">
+    <?php $__m_cat=M("category");$__cat_list=$__m_cat->where("lang='zh-cn'  AND type='p' AND pid=0")->limit()->select();foreach($__cat_list as $_ck=>$_cv):$cid=$_cv['cid'];$child=$__m_cat->where('pid='.$cid)->order('cid DESC')->select();extract($_cv);?><div class="pro_list">
+        <div class="pro_list_t">
+            <i><?php echo ($ename); ?></i>
+            <span><?php echo ($name); ?></span>
+        </div>
+        <div class="pro_list_b">
+            <ul>
+                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "此分类暂无相关信息" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo['cid'] == $cid): ?><li>
+                    <a href="<?php echo ($vo['url']); ?>" title="<?php echo $vo['description'];?>" target="_blank">
+                        <div class="box">
+                            <img src="<?php echo get_default_img($vo['image_id']);?>" alt="<?php echo $vo['description'];?>"/>
+                        </div>
+                        <span><?php echo ($vo["title"]); ?></span>
+                        <em><?php echo ($vo["ename"]); ?></em>
+                    </a>
+                </li><?php endif; endforeach; endif; else: echo "此分类暂无相关信息" ;endif; ?>
+            </ul>
+        </div>
+    </div><?php endforeach; ?>
+</div>
 <!--footer开始-->
     <div id="footer" class="footer">
         <div class="center">
@@ -93,20 +96,19 @@
                 <div>
                     COPYRIGHT © 远瞻股权投资管理（上海）有限公司
                 </div>
+                <!--友情链接-->
+
+                <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
                 <!--统计代码-->
-                <div><a href="#" target="_blank">站长统计</a></div>
+                <div><?php echo ($site["tongji"]); ?></div>
             </div>
 
             <div class="footer_r">
                 <ul>
-                    <li>
-                        <span><img src="/yuanzhan/Public/Home/images/qrcode.jpg" alt=""/></span>
-                        <em>远瞻微信公众号</em>
-                    </li>
-                    <li>
-                        <span><img src="/yuanzhan/Public/Home/images/qrcode.jpg" alt=""/></span>
-                        <em>远瞻手机端</em>
-                    </li>
+                    <?php if(is_array($ad_info)): $i = 0; $__LIST__ = $ad_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                        <span><img src="/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>" alt="<?php echo ($vo["ad_name"]); ?>"/></span>
+                        <em><?php echo ($vo["ad_name"]); ?></em>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>

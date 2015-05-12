@@ -1,15 +1,15 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>友情链接管理-<?php echo ($site["SITE_INFO"]["name"]); ?></title>
-    <?php $addCss=""; $addJs=""; $currentNav ='友情链接管理 >友情链接列表'; ?>
+    <meta charset="utf-8">
+    <title>微信配置-系统设置-<?php echo ($site["SITE_INFO"]["name"]); ?></title>
+    <?php $addCss=""; ?>
+    <?php $addJs=""; ?>
     <link rel="stylesheet" type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Admin/Css/base.css|/yuanzhan/Public/Admin/Css/layout.css|/yuanzhan/Public/Js/asyncbox/skins/default.css<?php echo ($addCss); ?>" />
 <script type="text/javascript" src="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Js/jquery-1.9.0.min.js|/yuanzhan/Public/Js/jquery.lazyload.js|/yuanzhan/Public/Js/functions.js|/yuanzhan/Public/Admin/Js/base.js|/yuanzhan/Public/Js/jquery.form.js|/yuanzhan/Public/Js/asyncbox/asyncbox.js<?php echo ($addJs); ?>"></script>
 </head>
 <body>
-<div class="wrap">
-    <div id="Top">
+<div class="wrap"> <div id="Top">
     <div class="logo"><a target="_blank" href="<?php echo ($site["WEB_ROOT"]); ?>"><img src="/yuanzhan/Public/Admin/Img/logo.png" /></a></div>
     <div class="help"><a href="http://www.conist.com/bbs" target="_blank">使用帮助</a><span><a href="http://www.conist.com" target="_blank">关于</a></span></div>
     <div class="menu">
@@ -24,8 +24,7 @@
     </div>
 </div>
 <div class="clear"></div>
-    <div class="mainBody">
-        <div id="Left">
+    <div class="mainBody"> <div id="Left">
     <div id="control" class=""></div>
     <div class="subMenuList">
         <div class="itemTitle"><?php if(CONTROLLER_NAME == 'Index'): ?>常用操作<?php else: ?>子菜单<?php endif; ?> </div>
@@ -36,29 +35,34 @@
 
 </div>
         <div id="Right">
-            <div class="Item hr">
-                <div class="current" style="max-width: 100px; float: left;">友情链接列表</div>
-                <div style="width: 100px;float: right;"><button type="button" class="btn" onclick="window.location.href='<?php echo U('Siteinfo/add_link');?>'">添加</button></div>
+            <div class="contentArea">
+                <div class="Item hr">
+                    <div class="current">微信配置</div>
+                </div>
+                <form action="" method="post">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                        <tr>
+                            <th width="120">微信APIKEY：</th>
+                            <td><input name="token" type="text" class="input" size="40" value="<?php echo ($site["WEIXIN"]["token"]); ?>" />   如果没有请到<a target="_blank" href="https://mp.weixin.qq.com/">这里</a>申请</td>
+                        </tr>
+                        <tr>
+                            <th>回调内容：</th>
+                            <td><textarea name="callback" cols="100" rows="3"><?php echo ($site["WEIXIN"]["callback"]); ?></textarea><br />
+                                使用|线隔开关键字和回调内容，使用*隔开每条回调，如：网站名称|我的网站名称*网站名称2|我的网站名称2
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>本站回调地址：</th>
+                            <td>
+                                <?php echo ($site["SITE_INFO"]["url"]); ?>/index.php/WeiXin
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="commonBtnArea" >
+                    <button class="btn submit">提交</button>
+                </div>
             </div>
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
-                <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>标题</td>
-                    <td width="400">链接</td>
-                    <td>状态</td>
-                    <td width="150">操作</td>
-                </tr>
-                </thead>
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr align="center" id="<?php echo ($vo["id"]); ?>">
-                        <td align="left"><?php echo ($vo["id"]); ?></td>
-                        <td><?php echo ($vo["title"]); ?></td>
-                        <td><?php echo ($vo["link"]); ?></td>
-                        <td><?php if($vo['display'] == 1): ?>显示<?php else: ?>隐藏<?php endif; ?></td>
-                        <td>[ <a href="/yuanzhan/jkd/Siteinfo/add_link?id=<?php echo ($vo["id"]); ?>">编辑 </a> ] [ <a link="<?php echo U('Siteinfo/dellink/',array('id'=>$vo['id']));?>" href="javascript:void(0)" name="<?php echo ($vo["title"]); ?>" class="del">删除 </a> ]</td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                <tr><td colspan="6" align="right"><?php echo ($page); ?></td></td></tr>
-            </table>
         </div>
     </div>
 </div>
@@ -82,16 +86,8 @@
 
 </script>
 <script type="text/javascript">
-    $(function(){
-        $(".del").click(function(){
-            var delLink=$(this).attr("link"),$this = $(this);
-            popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
-                if(action == 'ok'){
-                    delByLink(delLink,$this);
-                }
-            });
-            return false;
-        });
+    $(".submit").click(function(){
+        commonAjaxSubmit();
     });
 </script>
 </body>

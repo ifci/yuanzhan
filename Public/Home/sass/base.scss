@@ -256,6 +256,7 @@ section, article, aside, header, footer, nav, dialog, figure {
 .footer_l{
   @extend %fl;
   margin-top: 60px;
+  max-width: 600px;
   & > div{
     margin-top: 14px;
   }
@@ -351,6 +352,17 @@ section, article, aside, header, footer, nav, dialog, figure {
     &:hover{
       color: #333;
     }
+  }
+}
+
+.flink{
+  line-height: 1.6;
+  span{
+    @extend %inline;
+  }
+  a{
+    margin: 0 5px;
+    @extend %inline;
   }
 }
 

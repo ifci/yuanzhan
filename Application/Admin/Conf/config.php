@@ -7,6 +7,7 @@ return array(
         'News' => '资讯管理',
         'Product'=>'投资组合',
         'Video'=>'视频管理',
+        'Team'=>'投资团队',
         'Siteinfo'=>'网站功能',
         /*'Models'=>'模型管理',
         'SysData' => '数据管理',
@@ -58,6 +59,9 @@ return array(
         ),
         'Video' => array(
             'index' => '课程试听',
+        ),
+        'Team' => array(
+            'index' => '投资团队'
         ),
         'SysData' => array(
             'index' => '数据库备份',

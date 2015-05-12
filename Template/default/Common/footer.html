@@ -20,20 +20,22 @@
                 <div>
                     COPYRIGHT © 远瞻股权投资管理（上海）有限公司
                 </div>
+                <!--友情链接-->
+
+                <div class="flink"><span>友情链接：</span><flink order="sort DESC"><a href="{$link}" <if condition="$target eq 2">target='_blank'</if> title="{$title}">{$title}</a><span>|</span>
+                </flink><a href="#" target="_blank">九口袋网络</a></div>
                 <!--统计代码-->
-                <div><a href="#" target="_blank">站长统计</a></div>
+                <div>{$site.tongji}</div>
             </div>
 
             <div class="footer_r">
                 <ul>
+                    <volist name="ad_info" id="vo">
                     <li>
-                        <span><img src="__IMG__/qrcode.jpg" alt=""/></span>
-                        <em>远瞻微信公众号</em>
+                        <span><img src="__UPLOAD__/picture/{$vo.ad_img}" alt="{$vo.ad_name}"/></span>
+                        <em>{$vo.ad_name}</em>
                     </li>
-                    <li>
-                        <span><img src="__IMG__/qrcode.jpg" alt=""/></span>
-                        <em>远瞻手机端</em>
-                    </li>
+                    </volist>
                 </ul>
             </div>
         </div>

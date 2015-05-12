@@ -11,7 +11,15 @@
         <include file="Team:bar" />
         <div class="news_r team">
             <div class="team_t">
-                
+                <div class="team_c">
+                    <img src="{:get_default_img($info['image_id'])}" alt=""/>
+                </div>
+            </div>
+            <div class="team_b">
+                <h3>{$info.etit}</h3>
+                <div class="team_txt">{$info.etxt}</div>
+                <h3>{$info.tit}</h3>
+                <div class="team_txt">{$info.txt}</div>
             </div>
         </div>
     </div>

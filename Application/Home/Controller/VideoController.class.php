@@ -12,30 +12,29 @@ class VideoController extends BaseController {
      * 列表页
      */
     public function index(){
-        $V = M("Video");
+        $N = M("Video");
 
-        $list = $V -> where('status=1')
+        /*$list = $V -> where('status=1')
         -> field('id,title,url,content,status,image_id,published')
         -> order('id desc')
         -> limit(7)
         -> select();
-        $this -> assign('list', $list);
+        $this -> assign('list', $list);*/
 
-        /*$map['n.status']=1;
-        $map['n.lang']=LANG_SET;
+        $map['n.status']=1;
+//        $map['n.lang']=LANG_SET;
         $count = $N->table($N->getTableName().' n')
-            ->join($C->getTableName().' c on c.cid=n.cid')
+//            ->join($C->getTableName().' c on c.cid=n.cid')
             ->field('n.id')
             ->where($map)->count();
         $page = new \Think\Page($count,C('LISTNUM.newslist'));
         $showPage = $page->show();
         $this->assign("page", $showPage);
         $list=$N->table($N->getTableName().' n')
-            ->join($C->getTableName().' c on c.cid=n.cid')
-            ->field('n.id,n.cid,n.title,n.summary,n.update_time,n.click,n.image_id,c.name as cname,n.published')
+//            ->join($C->getTableName().' c on c.cid=n.cid')
+            ->field('n.id,n.title,n.url,n.content,n.update_time,n.image_id,n.published')
             ->where($map)->order('id desc')->limit("$page->firstRow, $page->listRows")->select();
-        $this->assign("list", $list);*/
-        $this->assign("ad_info", $this->getAd());
+        $this->assign("list", $list);
         $this->assign('webtitle',L('T_VIDEO'));
         $this->display();
     }

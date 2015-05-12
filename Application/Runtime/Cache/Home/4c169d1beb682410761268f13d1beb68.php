@@ -11,6 +11,7 @@
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
     <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/>
 </head>
 
 <body>
@@ -63,7 +64,7 @@
             <div class="cont_t">
                 <div class="cont_tl s_01"></div>
                 <div class="cont_tr">
-                    <a href="<?php echo U('Video/index');?>" title="查看更多"></a>
+                    <a href="<?php echo U('Video/index');?>" title="查看更多" target="_blank"></a>
                 </div>
             </div>
             <div class="video_list">
@@ -88,7 +89,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_02"></div>
                         <div class="cont_tr">
-                            <a href="<?php echo U('News/index','cid=2');?>" title="查看更多"></a>
+                            <a href="<?php echo U('News/index','cid=2');?>" title="查看更多" target="_blank"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -111,7 +112,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_03"></div>
                         <div class="cont_tr">
-                            <a href="<?php echo U('News/index','cid=4');?>" title="查看更多"></a>
+                            <a href="<?php echo U('News/index','cid=4');?>" title="查看更多" target="_blank"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -139,7 +140,7 @@
             <div class="cont_t">
                 <div class="cont_tl s_04"></div>
                 <div class="cont_tr">
-                    <a href="<?php echo U('Product/index');?>" title="查看更多"></a>
+                    <a href="<?php echo U('Product/index');?>" title="查看更多" target="_blank"></a>
                 </div>
             </div>
             <div class="cont_h3_ul">
@@ -179,8 +180,11 @@
                 <div>
                     COPYRIGHT © 远瞻股权投资管理（上海）有限公司
                 </div>
+                <!--友情链接-->
+
+                <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
                 <!--统计代码-->
-                <div><a href="#" target="_blank">站长统计</a></div>
+                <div><?php echo ($site["tongji"]); ?><a href="#" target="_blank">站长统计</a></div>
             </div>
 
             <div class="footer_r">

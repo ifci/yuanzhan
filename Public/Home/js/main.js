@@ -14,10 +14,16 @@ define(function (require, exports, module) {
             // 返回顶部
             bTop: function () {
                 this.click(function () {
-                    $("html,body").stop(true).animate({scrollTop: 0}, 200);
+                    $("html,body").stop(true).animate({scrollTop: 0}, 1000);
                 });
-            }/*,
-            layer: function(opts){
+            },
+            bNext: function(){
+                this.click(function(){
+                    var top = $(this).offset().top;
+                    $("html,body").stop(true).animate({scrollTop: top}, 800, 'easeOutCubic');
+                })
+            }
+            /*layer: function(opts){
                 var defaults = {
                     v: '0.0.1',
                     trigger : 'click',
@@ -85,7 +91,7 @@ define(function (require, exports, module) {
             effect: "fold"
         });
 
-        $(".video_list li").click(function(){
+        $(".video_list li,.vlist li").click(function(){
             var index = layer.load(1, {shade: ['.5','#000'], scrollbar: false});
             var url = $(this).data('url');
             setTimeout(function(){
@@ -109,9 +115,10 @@ define(function (require, exports, module) {
             var fz = parseInt(txt.css('font-size'));
             if($index === 0 && fz > 12){
                 txt.css('font-size', fz - 2);
-            }else if($index === 1 && fz < 18){
+            }else if($index === 1 && fz < 20){
                 txt.css('font-size', parseInt(fz) + 2);
             }
-        })
+        });
+        $(".bnext").bNext();
     })
 });

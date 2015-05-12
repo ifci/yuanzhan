@@ -161,7 +161,8 @@ section, article, aside, header, footer, nav, dialog, figure {
       color: #FFFFFF; }
 
 .footer_l {
-  margin-top: 60px; }
+  margin-top: 60px;
+  max-width: 600px; }
   .footer_l > div {
     margin-top: 14px; }
 
@@ -228,6 +229,11 @@ section, article, aside, header, footer, nav, dialog, figure {
     .bread_t a:hover {
       color: #333; }
 
+.flink {
+  line-height: 1.6; }
+  .flink a {
+    margin: 0 5px; }
+
 body {
   font-family: Microsoft yahei; }
 
@@ -238,7 +244,7 @@ body {
   background-image: url(../images/icon.png);
   background-repeat: no-repeat; }
 
-.paging em, .paging a, .paging span, .bread_t i {
+.paging em, .paging a, .paging span, .bread_t i, .flink span, .flink a {
   display: inline-block;
   *display: inline;
   zoom: 1;

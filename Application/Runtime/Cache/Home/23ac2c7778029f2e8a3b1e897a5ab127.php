@@ -11,6 +11,7 @@
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
     <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/>
 </head>
 
 <body>
@@ -53,7 +54,7 @@
         |
         <a href="<?php echo U($b_url);?>" title="<?php echo ($webtitle); ?>"><?php echo ($webtitle); ?></a>
         <?php if($details == 1): ?>|
-        <a href="/yuanzhan/News/index/id/2.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
+        <a href="/yuanzhan/News/index/cid/2.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
     </div>
 </div>
         <div class="main_t">
@@ -94,9 +95,9 @@
                             <a href="<?php echo U('news/read',array('id'=>$vo['id']));?>" title=""><img src="<?php echo get_default_img($vo['image_id']);?>" alt=""/></a>
                         </div>
                         <div class="news_tit">
-                            <span><a href="/yuanzhan/news/read/id/39.html" title=""><?php echo ($vo["title"]); ?></a></span>
+                            <span><a href="<?php echo U('news/read',array('id'=>$vo['id']));?>" title=""><?php echo ($vo["title"]); ?></a></span>
                             <i>UPDATA：<?php echo date('Y/m/d',$vo['published']);?></i>
-                            <em><a href="/yuanzhan/news/read/id/39.html" title=""><?php echo ($vo["summary"]); ?></a></em>
+                            <em><a href="<?php echo U('news/read',array('id'=>$vo['id']));?>" title=""><?php echo ($vo["summary"]); ?></a></em>
                         </div>
                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -130,6 +131,9 @@
                 <div>
                     COPYRIGHT © 远瞻股权投资管理（上海）有限公司
                 </div>
+                <!--友情链接-->
+
+                <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
                 <!--统计代码-->
                 <div><a href="#" target="_blank">站长统计</a></div>
             </div>

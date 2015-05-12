@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>添加、编辑视频-后台管理-{$site.SITE_INFO.name}</title>
+    <title>添加、编辑团队-后台管理-{$site.SITE_INFO.name}</title>
     <php>
         $addCss="";
         $addJs="";
-        $currentNav ='视频管理 > 视频管理';
+        $currentNav ='团队管理 > 团队管理';
     </php>
     <include file="Common:intoHead" />
     <style>
@@ -60,7 +60,7 @@
         <include file="Common:left" />
         <div id="Right">
             <div class="Item hr">
-                <div class="current">视频管理</div>
+                <div class="current">团队管理</div>
             </div>
             <form>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
@@ -78,19 +78,16 @@
                     <php>}</php>
 
                     <tr>
-                        <th width="100">视频标题：</th>
+                        <th width="100">团队名称：</th>
                         <td><input id="title" type="text" class="input" size="60" name="info[title]" value="{$info.title}"/> <a href="javascript:void(0)" id="checkPageTitle">检测是否重复</a></td>
                     </tr>
                     <tr>
-                        <th width="100">视频发布状态：</th>
+                        <th width="100">发布状态：</th>
                         <td><php>if(ACTION_NAME == 'add_page')$info['status'] = 1;</php><label><input type="radio" name="info[status]" value="1" <if condition="$info.status eq 1"> checked="checked"</if> /> 已发布状态</label> &nbsp; <label><input type="radio" name="info[status]" value="0" <if condition="$info.status eq 0"> checked="checked"</if> /> 待审核状态</label></td>
                     </tr>
+
                     <tr>
-                        <th>视频地址：</th>
-                        <td><input type="text" class="input" size="40" name="info[url]" value="{$info.url}"/></td>
-                    </tr>
-                    <tr>
-                        <th>视频图片：</th>
+                        <th>团队图片：</th>
                         <td>
                             <if condition="$img_info eq null">
                                 <div kid="1" class="droparea spot" id="image1" style="background-image: url({$vo['savepath']});background-size: 220px 160px;" >
@@ -112,11 +109,26 @@
                                 <div class="instructions">添加新的图片栏</div>
                                 <div style="font:180px/190px Arial;color: #999;cursor:pointer;">+</div>
                             </div>-->
-                            <div style="color: #666;">图片尺寸：(338*278)</div>
 
                         </td>
                     </tr>
                     <tr>
+                        <th>英文标题：</th>
+                        <td><input type="text" class="input" size="40" name="info[etit]" value="{$info.etit}"/></td>
+                    </tr>
+                    <tr>
+                        <th>英文介绍：</th>
+                        <td><textarea class="input" style="height: 120px; width: 450px;" name="info[etxt]">{$info.etxt}</textarea></td>
+                    </tr>
+                    <tr>
+                        <th>中文标题：</th>
+                        <td><input type="text" class="input" size="40" name="info[tit]" value="{$info.tit}"/></td>
+                    </tr>
+                    <tr>
+                        <th>中文介绍：</th>
+                        <td><textarea class="input" style="height: 120px; width: 450px;" name="info[txt]">{$info.txt}</textarea></td>
+                    </tr>
+                    <tr style="display: none;">
                         <th>内容：</th>
                         <td><textarea id="content" class="" style="height: 300px; width: 80%;" name="info[content]">{$info['content']}</textarea></td>
                     </tr>

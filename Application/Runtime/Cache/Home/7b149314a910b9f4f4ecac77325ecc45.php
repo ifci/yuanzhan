@@ -54,88 +54,19 @@
         |
         <a href="<?php echo U($b_url);?>" title="<?php echo ($webtitle); ?>"><?php echo ($webtitle); ?></a>
         <?php if($details == 1): ?>|
-        <a href="/yuanzhan/news/read/id/35.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
+        <a href="/yuanzhan/Law/index.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
     </div>
 </div>
     <div class="main_t">
         <div class="main_c">
-            <b>NEWS</b>
-            <em>新闻动态</em>
+            <b>LEGAL DISCLAIMER</b>
+            <em>法律声明</em>
         </div>
     </div>
-    <div class="news center">
-        <div class="news_l">
-    <ul class="news_cat">
-        <?php $__m_cat=M("category");$__cat_list=$__m_cat->where("lang='zh-cn'  AND type='n' AND pid=1")->limit()->select();foreach($__cat_list as $_ck=>$_cv):$cid=$_cv['cid'];$child=$__m_cat->where('pid='.$cid)->order('cid DESC')->select();extract($_cv); $cv = $_GET['id'] ? $_GET['id'] : 2; ?>
-        <li class="<?php if($cv == $cid): ?>news_on<?php endif; ?>">
-            <a href="<?php echo U('News/index',array('id'=>$cid));?>" title="">
-                <i></i>
-                <span><?php echo ($name); ?></span>
-                <em>>></em>
-            </a>
-        </li><?php endforeach; ?>
-
-        <li class="news_rcm">
-            <div class="news_rcm_t">
-                <i></i>
-                <span>推荐新闻</span>
-            </div>
-            <ul>
-                <?php $__m_news=M("news"); $_news_list=$__m_news ->field("id,cid,title,update_time,image_id,status,published,summary,url") ->where("status=1 AND lang='zh-cn'") ->order("click DESC") ->limit(8) ->select(); foreach ($_news_list as $key=>$new):?><li>
-                    <a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title="<?php echo $new['title'];?>"><?php echo cutStr($new['title'],24,0);?></a>
-                </li><?php endforeach;?>
-            </ul>
-        </li>
-    </ul>
-</div>
-        <div class="news_r news_con">
-            <div class="tit"><?php echo ($info["title"]); ?></div>
-            <div class="dcz">
-                <div class="date">
-                    <i></i>
-                    <span><?php echo (date('Y-m-d',$info['published'])); ?></span>
-                </div>
-                <div class="click">
-                    <i></i>
-                    <span><?php echo ($info['click']); ?></span>
-                </div>
-                <div class="zoom">
-                    <em>A<sup>-</sup></em>
-                    <em>A<sup>+</sup></em>
-                </div>
-            </div>
-            <div class="txt">
-                <?php echo ($info['content']); ?>
-            </div>
-            <div class="news_bs">
-                <div class="share">分享到：<div class="bshare-custom" style="display:inline-block;*display:inline;zoom:1;"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=7afd94bb-a7e8-4d65-9936-979b687f14eb&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></div>
-                <div class="back">
-                    <a href="<?php echo U('News/index');?>" title="返回列表">
-                        <i></i>
-                        <span>返回列表</span>
-                    </a>
-                </div>
-            </div>
-            <div class="news_np">
-                <div>
-                    <a href="<?php echo $prev == null ? 'javascript:':U('News/read',array('id'=>$prev[id]));?>" title="<?php echo ($prev["title"]); ?>">
-                        <i></i>
-                        <span>上一篇： <?php echo $prev[title] == null ?'没有了':$prev[title];?></span>
-                    </a>
-                </div>
-                <div>
-                    <a href="<?php echo ($next["title"]); ?>" title="">
-                        <i></i>
-                        <span>下一篇： <?php echo $next[title] == null ?'没有了':$next[title];?></span>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="news center law">
+        <?php echo ($flsm[0]['content']); ?>
     </div>
 </div>
-<!--content结束-->
-
-
 <!--footer开始-->
     <div id="footer" class="footer">
         <div class="center">

@@ -5,7 +5,7 @@ a.nav_on{color:#f6f602}.nav ul span, .nav ul
 em{display:block}.nav ul
 span{margin-top:24px}.nav ul
 em{margin-top:5px}#content{width:100%}#footer{width:100%;background:#252525;overflow:hidden;color:#a4a4a4;font-size:14px;padding-bottom:30px}#footer
-a{color:#a4a4a4}#footer a:hover{color:#FFF}.footer_l{margin-top:60px}.footer_l>div{margin-top:14px}.footer_nav
+a{color:#a4a4a4}#footer a:hover{color:#FFF}.footer_l{margin-top:60px;max-width:600px}.footer_l>div{margin-top:14px}.footer_nav
 li{border-left:2px solid #a4a4a4;line-height:1;padding:0
 5px}.footer_nav li:first-child{border:none;padding-left:0}.footer_tel{font-size:16px}.footer_r{margin-top:46px}.footer_r
 li{margin-left:30px;text-align:center;color:#ccc;width:146px}.footer_r li
@@ -19,10 +19,12 @@ span{padding:5px
 10px;margin-left:5px}.bread{width:1200px;margin:70px
 auto 0}.bread_t{color:#999}.bread_t
 i{width:8px;height:14px;background-position:0 -137px}.bread_t
-a{color:#999}.bread_t a:hover{color:#333}body{font-family:Microsoft yahei}.nav ul
+a{color:#999}.bread_t a:hover{color:#333}.flink{line-height:1.6}.flink
+a{margin:0
+5px}body{font-family:Microsoft yahei}.nav ul
 span{font-family:Arial}.bread_t
-i{background-image:url(/yuanzhan/Public/Home/images/icon.png);background-repeat:no-repeat}.paging em, .paging a, .paging span, .bread_t
-i{display:inline-block;*display:inline;zoom:1;vertical-align:middle}#header,#footer{min-width:1200px}#footer,.footer_nav,.bread{zoom:1}#footer:after,.footer_nav:after,.bread:after{content:".";display:block;height:0;clear:both;visibility:hidden}.nav ul li, .footer_l, .footer_nav li, .footer_r
+i{background-image:url(/yuanzhan/Public/Home/images/icon.png);background-repeat:no-repeat}.paging em, .paging a, .paging span, .bread_t i, .flink span, .flink
+a{display:inline-block;*display:inline;zoom:1;vertical-align:middle}#header,#footer{min-width:1200px}#footer,.footer_nav,.bread{zoom:1}#footer:after,.footer_nav:after,.bread:after{content:".";display:block;height:0;clear:both;visibility:hidden}.nav ul li, .footer_l, .footer_nav li, .footer_r
 li{float:left}.nav,.footer_r,.bread_t{float:right}.bannerBox{min-width:1200px;width:100%;height:680px;margin:auto;overflow:hidden;position:relative}.bannerBox>.hd{width:100%;height:40px;overflow:hidden;position:absolute;left:0px;bottom:0px;z-index:1;text-align:center}.bannerBox > .hd
 ul{zoom:1}.bannerBox > .hd ul
 li{display:inline-block;*display:inline;zoom:1;width:14px;height:14px;font-size:0;font-weight:bold;margin:5px

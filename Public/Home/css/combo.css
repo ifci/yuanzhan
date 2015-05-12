@@ -5,6 +5,9 @@
  *
  * @DateTime: 2015-03-23 09:09:49
  */
+.pro_con {
+  margin-top: -46px; }
+
 .pro_list {
   width: 1200px;
   margin: auto;
@@ -60,7 +63,7 @@
   .main_c b {
     font-size: 30px;
     vertical-align: middle;
-    font-family: Impact; }
+    font-family: AuroraBT-BoldCondensed29140; }
   .main_c em {
     font-size: 18px;
     vertical-align: middle;
@@ -175,17 +178,22 @@ li.news_rcm a:hover {
   margin-left: 50px; }
   .news_con .click i {
     background-position: -27px -138px; }
-.news_con .zoom em {
-  margin-right: 20px;
-  font-size: 14px;
-  width: 22px;
-  height: 22px;
-  border: 1px solid #c6cdd5;
-  cursor: pointer;
-  text-align: center; }
-  .news_con .zoom em:hover {
-    background: #c6cdd5;
-    color: #fff; }
+.news_con .zoom {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+  .news_con .zoom em {
+    margin-right: 20px;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #c6cdd5;
+    cursor: pointer;
+    text-align: center; }
+    .news_con .zoom em:hover {
+      background: #c6cdd5;
+      color: #fff; }
 .news_con .txt {
   font-size: 14px;
   border-top: 1px solid #f1f1f1;
@@ -234,14 +242,81 @@ li.news_rcm a:hover {
       margin-left: 16px;
       line-height: 1; }
 
+.team_t {
+  margin-top: 62px;
+  height: 280px;
+  background: url(../images/team_bg.jpg) no-repeat; }
+
+.team_c {
+  margin: -62px 50px 0 0; }
+
+.team_b {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 10px; }
+  .team_b h3 {
+    font-weight: bold;
+    color: #333;
+    margin-top: 46px;
+    font-size: 16px; }
+
+.vlist {
+  overflow: hidden;
+  width: 1200px;
+  margin-top: 20px; }
+  .vlist ul {
+    width: 1300px; }
+  .vlist li {
+    width: 340px;
+    margin: 0 90px 50px 0;
+    cursor: pointer; }
+  .vlist .box {
+    border: 1px solid #ccc;
+    height: 278px;
+    overflow: hidden; }
+    .vlist .box img {
+      width: 100%; }
+  .vlist .txt {
+    color: #333;
+    margin-top: 10px;
+    font-size: 18px; }
+
+.connect {
+  padding: 0 6px 120px; }
+
+.connect_l {
+  font-size: 14px;
+  width: 284px;
+  color: #333;
+  margin-top: 50px; }
+  .connect_l .tel {
+    background: url(../images/phone.png) no-repeat;
+    height: 44px;
+    padding: 16px 0 0 44px; }
+    .connect_l .tel b {
+      color: #ec6941; }
+
+.connect_r {
+  margin-top: 30px; }
+
+.law {
+  font-size: 14px;
+  line-height: 40px;
+  color: #333;
+  padding: 30px 10px;
+  min-height: 500px; }
+
 .news_cat > li em, .news_con .zoom em {
   font-family: SimSun; }
+
+.team_b h3:first-child {
+  font-family: Arial; }
 
 .news_con .dcz i, .news_con .news_bs .back i {
   background-image: url(../images/icon.png);
   background-repeat: no-repeat; }
 
-li.news_rcm a, .news_list .news_tit span a, .news_list .news_tit i {
+li.news_rcm a, .news_list .news_tit span a, .news_list .news_tit i, .vlist .txt {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -256,19 +331,19 @@ li.news_rcm a, .news_list .news_tit span a, .news_list .news_tit i {
   width: 1200px;
   margin: auto; }
 
-.pro_list_b ul, .news, .news_cat a, .news_rcm_t, .news_list li, .news_con .dcz, .news_con .news_bs, .news_con .news_np > div {
+.pro_list_b ul, .news, .news_cat a, .news_rcm_t, .news_list li, .news_con .dcz, .news_con .news_bs, .news_con .news_np > div, .vlist, .connect {
   zoom: 1; }
-  .pro_list_b ul:after, .news:after, .news_cat a:after, .news_rcm_t:after, .news_list li:after, .news_con .dcz:after, .news_con .news_bs:after, .news_con .news_np > div:after {
+  .pro_list_b ul:after, .news:after, .news_cat a:after, .news_rcm_t:after, .news_list li:after, .news_con .dcz:after, .news_con .news_bs:after, .news_con .news_np > div:after, .vlist:after, .connect:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden; }
 
-.pro_list_b li, .news_l, .news_cat > li i, .news_cat > li span, .news_list .news_box, .news_con .date, .news_con .click, .news_con .news_bs .share, .news_con .news_np > div i {
+.pro_list_b li, .news_l, .news_cat > li i, .news_cat > li span, .news_list .news_box, .news_con .date, .news_con .click, .news_con .news_bs .share, .news_con .news_np > div i, .vlist li, .connect_l {
   float: left; }
 
-.news_cat > li em, .news_r, .news_list .news_tit, .news_con .zoom, .news_con .news_bs .back {
+.news_cat > li em, .news_r, .news_list .news_tit, .news_con .zoom, .news_con .news_bs .back, .team_c, .connect_r {
   float: right; }
 
 /*# sourceMappingURL=combo.css.map */

@@ -52,11 +52,15 @@ $lcolor: #005ea7;   //链接颜色
 }
 
 //投资组合
+.pro_con{
+  margin-top: -46px;
+}
 .pro_list{
   width: 1200px;
   margin: auto;
   padding-bottom: 50px;
 }
+
 .pro_list_t{
   @extend %inline;
   background: #212121;
@@ -128,7 +132,7 @@ $lcolor: #005ea7;   //链接颜色
   b{
     font-size: 30px;
     vertical-align: middle;
-    font-family: Impact;
+    font-family:AuroraBT-BoldCondensed29140;
   }
   em{
     font-size: 18px;
@@ -305,6 +309,10 @@ li.news_rcm{
   }
   .zoom{
     @extend %fr;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
     em{
       margin-right: 20px;
       @extend %inline,%ffst;
@@ -395,7 +403,102 @@ li.news_rcm{
   }
 }
 
+//投资团队
+.team_t{
+  margin-top: 62px;
+  height: 280px;
+  background: url(../images/team_bg.jpg) no-repeat;
+}
 
+.team_c{
+  @extend %fr;
+  margin: -62px 50px 0 0;
+}
+
+.team_b{
+  @include fz(16px);
+  line-height: 1.6;
+  padding: 0 10px;
+  h3{
+    font-weight: bold;
+    color: #333;
+    margin-top: 46px;
+    @include fz(16px);
+    &:first-child{
+      @extend %ffar;
+    }
+  }
+  .team_txt{
+
+  }
+}
+
+
+//视频专区
+.vlist{
+  @extend %clearfix;
+  overflow: hidden;
+  width: 1200px;
+  margin-top: 20px;
+  ul{
+    width: 1300px;
+  }
+  li{
+    width: 340px;
+    margin: 0 90px 50px 0;
+    @extend %fl;
+    cursor: pointer;
+  }
+  .box{
+    @include border(#ccc);
+    height: 278px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .txt{
+    color: #333;
+    margin-top: 10px;
+    @include fz(18px);
+    @extend %nowrap;
+  }
+}
+
+//联系我们
+.connect{
+  padding: 0 6px 120px;
+  @extend %clearfix;
+}
+.connect_l{
+  @include fz(14px);
+  width: 284px;
+  @extend %fl;
+  color: #333;
+  margin-top: 50px;
+  .tel{
+    background: url(../images/phone.png) no-repeat;
+    height: 44px;
+    padding: 16px 0 0 44px;
+    b{
+      color: #ec6941;
+    }
+  }
+}
+
+.connect_r{
+  @extend %fr;
+  margin-top: 30px;
+}
+
+//法律声明
+.law{
+  @include fz(14px);
+  line-height: 40px;
+  color: #333;
+  padding: 30px 10px;
+  min-height: 500px;
+}
 
 
 %ffst{  //宋体

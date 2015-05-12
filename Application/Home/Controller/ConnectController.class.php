@@ -5,9 +5,7 @@ use Think\Controller;
 class ConnectController extends BaseController {
 
     public function index() {
-        $this->assign("ad_info", $this->getAd());
-        $this->assign('webtitle',L('T_INTRODUCE'));
-        $this->jkdjs = M('Page')->where("unique_id = 'jkdjs' AND display = 1")->order('id')->field('id,page_name,content')->select();
+        $this->assign('webtitle',L('T_CONNECT'));
         $this->display();
     }
 

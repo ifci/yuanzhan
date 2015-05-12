@@ -1,40 +1,20 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>资讯分类管理-资讯管理-后台管理首页-<?php echo ($site["SITE_INFO"]["name"]); ?></title>
-        <?php $addCss=""; $addJs=""; $currentNav ='资讯管理 > 资讯分类管理'; ?>
-        <link rel="stylesheet" type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Admin/Css/base.css|/yuanzhan/Public/Admin/Css/layout.css|/yuanzhan/Public/Js/asyncbox/skins/default.css<?php echo ($addCss); ?>" />
-<script type="text/javascript" src="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Js/jquery-1.9.0.min.js|/yuanzhan/Public/Js/jquery.lazyload.js|/yuanzhan/Public/Js/functions.js|/yuanzhan/Public/Admin/Js/base.js|/yuanzhan/Public/Js/jquery.form.js|/yuanzhan/Public/Js/asyncbox/asyncbox.js<?php echo ($addJs); ?>"></script>
+        <title>资讯分类管理-资讯管理-后台管理首页-{$site.SITE_INFO.name}</title>
+        <php>
+            $addCss="";
+            $addJs="";
+            $currentNav ='资讯管理 > 资讯分类管理';
+        </php>
+        <include file="Common:intoHead" />
     </head>
     <body>
         <div class="wrap">
-            <div id="Top">
-    <div class="logo"><a target="_blank" href="<?php echo ($site["WEB_ROOT"]); ?>"><img src="/yuanzhan/Public/Admin/Img/logo.png" /></a></div>
-    <div class="help"><a href="http://www.conist.com/bbs" target="_blank">使用帮助</a><span><a href="http://www.conist.com" target="_blank">关于</a></span></div>
-    <div class="menu">
-        <ul> <?php echo ($menu); ?> </ul>
-    </div>
-</div>
-<div id="Tags">
-    <div class="userPhoto"><img src="/yuanzhan/Public/Admin/Img/userPhoto.jpg" /> </div>
-    <div class="navArea">
-        <div class="userInfo"><div><a href="<?php echo U('Webinfo/index');?>" class="sysSet"><span>&nbsp;</span>系统设置</a> <a href="<?php echo U("Public/loginOut");?>" class="loginOut"><span>&nbsp;</span>退出系统</a></div>欢迎您，<?php echo ($my_info["email"]); ?></div>
-        <div class="nav"><font id="today"><?php echo date("Y-m-d H:i:s"); ?></font>您的位置：<?php echo ($currentNav); ?></div>
-    </div>
-</div>
-<div class="clear"></div>
+            <include file="Common:head" />
             <div class="mainBody">
-                <div id="Left">
-    <div id="control" class=""></div>
-    <div class="subMenuList">
-        <div class="itemTitle"><?php if(CONTROLLER_NAME == 'Index'): ?>常用操作<?php else: ?>子菜单<?php endif; ?> </div>
-        <ul>
-            <?php if(is_array($sub_menu)): foreach($sub_menu as $key=>$sv): ?><li><a href="<?php echo ($sv["url"]); ?>"><?php echo ($sv["title"]); ?></a></li><?php endforeach; endif; ?>
-        </ul>
-    </div>
-
-</div>
+                <include file="Common:left" />
                 <div id="Right">
                     <div class="Item hr">
                         <div class="current">资讯分类管理</div>
@@ -44,14 +24,16 @@
                         <input type="hidden" name="act" value="add" /> &nbsp;
                         <select name="data[pid]">
                             <option value="0">顶级分类</option>
-                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["cid"]); ?>"><?php echo ($vo["fullname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <volist name="list" id="vo">
+                                <option value="{$vo.cid}">{$vo.fullname}</option>
+                            </volist>
                         </select>  &nbsp;
-                        <?php if($site['SITE_INFO']['LANG_SWITCH_ON']=='1'){ ?>
+                        <php>if($site['SITE_INFO']['LANG_SWITCH_ON']=='1'){</php>
                         <select name="data[lang]">
                             <option value="zh-cn"  >简体中文</option>
                             <option value="en-us"  >English</option>
                         </select>  &nbsp;
-                        <?php } ?>
+                        <php>}</php>
                         <input placeholder="你要添加的分类名称" id="newName" class="input" type="text" name="data[name]" value="" /> &nbsp;
                         <button class="btn quickSubmit">确定添加</button>
                     </form>
@@ -67,9 +49,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tree): $mod = ($i % 2 );++$i;?><tr pid="<?php echo ($tree["pid"]); ?>" cid="<?php echo ($tree["cid"]); ?>">
-                                    <td width="10%" align="center"><?php echo ($tree["cid"]); ?><input type="hidden" name="cid" value="<?php echo ($tree["cid"]); ?>"/></td>
-                                    <td width="20%" class="tree" style="cursor: pointer;"><?php echo ($tree["fullname"]); ?></td>
+                            <volist name="list" id="tree">
+                                <tr pid="{$tree.pid}" cid="{$tree.cid}">
+                                    <td width="10%" align="center">{$tree.cid}<input type="hidden" name="cid" value="{$tree.cid}"/></td>
+                                    <td width="20%" class="tree" style="cursor: pointer;">{$tree.fullname}</td>
                                     <td width="20%">
                                         <select name="act" class="act">
                                             <option selected="selected" value="edit">修改该分类</option>
@@ -80,14 +63,19 @@
                                     <td width="20%">
                                         <select name="pid">
                                             <option value="0">顶级分类</option>
-                                            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i; if($vo1['cid'] == $tree['cid']): ?><option value="<?php echo ($vo1["cid"]); ?>" selected="selected" readonly><?php echo ($vo1["fullname"]); ?></option>
-                                                    <?php else: ?>
-                                                    <option value="<?php echo ($vo1["cid"]); ?>"><?php echo ($vo1["fullname"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                                            <volist name="list" id="vo1">
+                                                <if condition="$vo1['cid'] eq $tree['cid']">
+                                                    <option value="{$vo1.cid}" selected="selected" readonly>{$vo1.fullname}</option>
+                                                    <else/>
+                                                    <option value="{$vo1.cid}">{$vo1.fullname}</option>
+                                                </if>
+                                            </volist>
                                         </select>
                                     </td>
                                     <td width="20%"><input type="text" value="" name="name" class="input" placeholder="你要修改分类的新名称"/></td>
                                     <td align="center" width="10%"><button class="btn opCat">确定</button></td>
-                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </tr>
+                            </volist>
                         </tbody>
                     </table>
                 </div>
@@ -100,24 +88,7 @@
             <input id="name" type="hidden" name="data[name]" />
         </form>
         <div class="clear"></div>
-        <script type="text/javascript">
-    $(window).resize(autoSize);
-    $(function(){
-        autoSize();
-        $(".loginOut").click(function(){
-            var url=$(this).attr("href");
-            popup.confirm('你确定要退出吗？','你确定要退出吗',function(action){
-                if(action == 'ok'){ window.location=url; }
-            });
-            return false;
-        });
-
-        var time=self.setInterval(function(){$("#today").html(date("Y-m-d H:i:s"));},1000);
-
-
-    });
-
-</script>
+        <include file="Common:foot" />
         <script type="text/javascript">
             $(function(){
                 $(".opCat").click(function(){

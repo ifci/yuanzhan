@@ -1,22 +1,22 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class VideoController extends CommonController {
+class TeamController extends CommonController {
 
     public function index(){
-            $M = M("Video");
+            $M = M("Team");
             $count = $M->count();
             //import("ORG.Util.Page");       //载入分页类
             $page = new \Think\Page($count, 15);
             $showPage = $page->show();
             $this->assign("page", $showPage);
-            $this->assign("list", D("Video")->listNews($page->firstRow, $page->listRows));
+            $this->assign("list", D("Team")->listNews($page->firstRow, $page->listRows));
             $this->display();
         }
 
         public function add_page(){
             if(IS_POST){
-                $m_page=M('Video');
+                $m_page=M('Team');
                 $data=$_POST['info'];
                 $map1['title']=$data['title'];
                 $data['published']=time();
@@ -47,7 +47,7 @@ class VideoController extends CommonController {
                                 $img_data['savepath']=$v;
                                 $img_data['savename']=end(explode('/',$v));
                                 $img_data['create_time']=time();
-                                $img_data['catname']='video';
+                                $img_data['catname']='team';
                                 if($v)
                                     $image_id[$k]=$M_image->add($img_data);
                             }
@@ -66,7 +66,7 @@ class VideoController extends CommonController {
                                 $img_data['savepath']=$v;
                                 $img_data['savename']=end(explode('/',$v));
                                 $img_data['create_time']=time();
-                                $img_data['catname']='video';
+                                $img_data['catname']='team';
                                 if($v)
                                     $image_id[$k]=$M_image->add($img_data);
                             }
@@ -74,11 +74,11 @@ class VideoController extends CommonController {
                         }
                     }
                     if($m_page->add($data)){
-                        echo json_encode(array("status" => 1, "info" => "添加视频成功",'url'=>U(CONTROLLER_NAME.'/index')));
+                        echo json_encode(array("status" => 1, "info" => "资料添加成功",'url'=>U(CONTROLLER_NAME.'/index')));
                     }
                 }
             }else{
-                $m_page=M('video');
+                $m_page=M('Team');
                 $map['id']=I('get.id');
                 $info=$m_page->where($map)->find();
                 if($info['image_id']){
@@ -102,7 +102,7 @@ class VideoController extends CommonController {
                 return false;
             }
             $map['id']=$id;
-            $M=M('video');
+            $M=M('Team');
             if($M->where('parent_id='.$id.' AND id!='.$id)->count()>0){
                 echo json_encode(array("status" => 0, "info" =>'删除失败,存在下级单页'));
                 exit;
@@ -113,10 +113,9 @@ class VideoController extends CommonController {
                 echo json_encode(array("status" => 0, "info" =>'删除失败，可能是不存在该ID的记录'));
             }
         }
-
         public function changeStatus(){
             $id=I('get.id');
-            $m_news=M("Video");
+            $m_news=M("Team");
             $map['id']=$id;
             $status=$m_news->where($map)->getField('status');
             $data['status']=abs($status-1);

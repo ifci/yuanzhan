@@ -11,6 +11,7 @@
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
     <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
+    <link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/>
 </head>
 
 <body>
@@ -43,151 +44,40 @@
 
 
 
-
 <!--content开始-->
     <div id="content">
-        
-        <!-- 课程试听 -->
-        <div class="introduction kvideo">
-            <div class="main_t center tac">
-                <b><?php echo L('T_VIDEO');?></b>
+        <div class="bread">
+    <div class="bread_t">
+        <i></i>
+        <span>当前位置：</span>
+        <a href="/yuanzhan/" title="首页">首页</a>
+        |
+        <a href="<?php echo U($b_url);?>" title="<?php echo ($webtitle); ?>"><?php echo ($webtitle); ?></a>
+        <?php if($details == 1): ?>|
+        <a href="/yuanzhan/Video/index.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
+    </div>
+</div>
+        <div class="main_t">
+            <div class="main_c">
+                <b>VIDEO</b>
+                <em>视频专区</em>
             </div>
-            <div class="introduction_h1 center">
-                <div class="introduction_list clearfix">
-                    <i class="icon fl"></i>
-                    <div class="introduction_ty2 fl">
-                        <div class="introduction_ty3 mt20">
-                            <b>课程视频</b>
+        </div>
+        <div class="news center">
+            <div class="news_r vlist">
+                <ul>
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li data-url="<?php echo ($vo["url"]); ?>">
+                        <div class="box">
+                            <img src="<?php echo get_default_img($vo['image_id']);?>" alt="<?php echo ($vo["title"]); ?>"/>
                         </div>
-                    </div>
-                </div>
-                <div class="kvideo_ty1 clearfix">
-                    <div class="kvideo_ty2 fl">
-                        <div class="kvideo_ty3 wimg pr">
-                            <img src="<?php echo get_default_img($list[0]['image_id']);?>" alt="" />
-                            <div class="kvplayer pa">
-                                <a href="<?php echo U('video/read',array('id'=>$list[0]['id']));?>" title="$list[0].title" target="_blank">
-                                    <div class="kvplayer_a"><img src="/yuanzhan/Public/Home/images/jkd_40.png" alt="" /></div>
-                                    <div class="kvplayer_b kvplayer_d"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="kvideo_ty4">
-                            <div class="kvideo_ty5">
-                                <div class="kvideo_ty6 clearfix">
-                                    <div class="kvideo_ty7 fl">
-                                        <b>九口袋课程试听</b>
-                                    </div>
-                                    <div class="kvideo_ty8 tar fr">
-                                        <?php echo (date('Y月m日',$list[0]["published"])); ?>
-                                    </div>
-                                </div>
-                                <div class="kvideo_ty9">
-                                    <b>域名网址：<?php echo ($list[0]["url"]); ?></b>
-                                </div>
-                                <div class="kvideo_ty10">
-                                    课程介绍：</div>
-                                <div class="kvideo_ty10 kvideo_ty11">
-                                    <?php echo ($list[0]["content"]); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kvideo_ty12 fl">
-                        <ul>
-                            <?php if(is_array($list)): $i = 0; $__LIST__ = array_slice($list,1,null,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="pr wimg">
-                                <img src="<?php echo get_default_img($vo['image_id']);?>" alt="" />
-                                <div class="kvplayer pa">
-                                    <a href="<?php echo U('video/read',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>" target="_blank">
-                                        <div class="kvplayer_a"><img src="/yuanzhan/Public/Home/images/jkd_40.png" alt="" /></div>
-                                    </a>
-                                </div>
-                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-                    </div>
-                </div>
+                        <div class="txt"><?php echo ($vo["title"]); ?></div>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                </ul>
             </div>
-            <div class="introduction_h1 bgf8">
-                <div class="center">
-                    <div class="introduction_list introduction_list2 clearfix">
-                        <i class="icon fl"></i>
-                        <div class="introduction_ty2 fl">
-                            <div class="introduction_ty3 mt20">
-                                <b>课程图集</b>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="kvideo_ty13 clearfix">
-                        <?php $__m_news=M("news"); $_news_list=$__m_news ->field("id,cid,title,update_time,image_id,status,published,summary,url") ->where("is_recommend=1 and cid=58 AND status=1 AND lang='zh-cn'") ->order("id DESC") ->limit(8) ->select(); foreach ($_news_list as $key=>$new):?><li class="pr">
-                            <div class="kvideo_ty21">
-                                <div class="kvideo_ty22 wimg pa">
-                                    <a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title="">
-                                        <img src="<?php echo get_default_img($new['image_id']);?>" alt="" />
-                                    </a>
-                                </div>
-                                <div class="kvideo_ty23">
-                                    <b><?php echo cutStr($new['title'],30,0);?></b>
-                                </div>
-                            </div>
-                        </li><?php endforeach;?>
-                    </ul>
-                </div>
-            </div>
-            <div class="introduction_h2">
-                <div class="center">
-                    <div class="introduction_list introduction_list3 clearfix">
-                        <i class="icon fl"></i>
-                        <div class="introduction_ty2 fl">
-                            <div class="introduction_ty3 mt20">
-                                <b>诊断报告</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kvideo_ty14">
-                        <div class="kvideo_ty15 tac">
-                            <b>每日前10名咨询免费获得网络营销行业诊断报告一份</b>
-                        </div>
-                        <div class="clearfix">
-                            <div class="kvideo_ty16 fl">
-
-                            </div>
-                            <div class="kvideo_ty17 fl">
-                                <div class="kvideo_ty18">
-                                    <b>请准确填写下列信息，我们的客服将在24小时内发给您！</b>
-                                </div>
-
-                                <form action="<?php echo U('message/add');?>" method="post">
-                                    <div class="kvideo_ty19">
-                                        姓&nbsp;&nbsp;&nbsp;&nbsp;名：&nbsp;&nbsp;<input name="name" id="uname" value="" type="text"  />
-                                    </div>
-                                    <div class="kvideo_ty19">
-                                        电&nbsp;&nbsp;&nbsp;&nbsp;话：&nbsp;&nbsp;<input name="tel" id="utel" value="" type="text" />
-                                    </div>
-                                    <div class="kvideo_ty19">
-                                        验&nbsp;证&nbsp;码：
-                                        <input class="input" name="verify_code" id="verify_code" type="text" value="" style="width:100px;" />
-                                        <img src="<?php echo U('Base/verify_code');?>"  title="看不清？单击此处刷新" onclick="this.src+='?rand='+Math.random();"  style="cursor: pointer; vertical-align: middle;"/>
-                                    </div>
-                                    <input type="submit" class="kvideo_ty20" value="" onclick="return check()" />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="introduction_h6 pr wimg">
-                <div class="introduction_ty24 pa">
-                    <div class="center">
-                        <!-- 我们最近的课程安排是在<span class="css29343">2014</span>年<span class="css29343">12</span>月<span class="css29343">11</span>日， -->
-                        九口袋课堂欢迎您
-                        <br />心动不如行动，赶快到现场参与我们的活动吧！
-                    </div>
-                </div>
-            </div>
+            <?php echo ($page); ?>
         </div>
     </div>
     <!--content结束-->
-
 <!--footer开始-->
     <div id="footer" class="footer">
         <div class="center">
@@ -208,6 +98,9 @@
                 <div>
                     COPYRIGHT © 远瞻股权投资管理（上海）有限公司
                 </div>
+                <!--友情链接-->
+
+                <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
                 <!--统计代码-->
                 <div><a href="#" target="_blank">站长统计</a></div>
             </div>

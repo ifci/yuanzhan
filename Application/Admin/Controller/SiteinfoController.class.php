@@ -136,7 +136,7 @@ class SiteinfoController extends CommonController {
         $count = $M->count();
         $page = new \Think\Page($count, 12);
         $showPage = $page->show();
-        $where['unique_id'] = array(array('eq','kcjs'),array('eq','fwjs'),array('eq','jkdjs'),'or');
+//        $where['unique_id'] = array(array('eq','kcjs'),array('eq','fwjs'),array('eq','jkdjs'),'or');
 
         // $where['unique_id'] = array('kcjs','fwjs');
         // $where['unique_id'] = 'kcjs';
@@ -163,7 +163,7 @@ class SiteinfoController extends CommonController {
                 $map1['id']=$map2['id']=array('neq',$data['id']);
             }
             if(!$data['page_name'] or !$data['unique_id']){
-                echo json_encode(array("status" => 0, "info" => "标题和别名不能为空"));
+                echo json_encode(array("status" => 0, "info" => "标题不能为空"));
                 exit;
             }
             if($m_page->where($map1)->count()>0){
@@ -273,12 +273,12 @@ class SiteinfoController extends CommonController {
                 echo json_encode(array("status" => 0, "info" => "广告名称不能为空"));
                 exit;
             }
-            if($data['ad_link']!="#"){
+            /*if($data['ad_link']!="#"){
                 if(false===strpos($data['ad_link'],'http://') && false===strpos($data['ad_link'],'https://')){
                     echo json_encode(array("status" => 0, "info" => "链接格式不正确"));
                     exit;
                 }
-            }
+            }*/
 
             if($_FILES['ad_img']['name']){
                 $upload = new \Think\Upload();// 实例化上传类
