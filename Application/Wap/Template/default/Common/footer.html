@@ -1,0 +1,59 @@
+<!--footer开始-->
+    <div id="footer" class="footer">
+        <div class="center">
+            <div class="footer_l">
+                <!--底部导航-->
+                <div class="footer_nav">
+                    <ul>
+                        <nav posstion="bottom" order="sort ASC">
+                        <li>
+                            <a href="<if condition='$action eq null'>{$link}<else />{:U($action)}</if>" title="{$nav_name}">{$nav_name}</a>
+                        </li>
+                        </nav>
+                    </ul>
+                </div>
+                <!--服务热线-->
+                <div class="footer_tel">
+                    全国服务热线：{$site.tel}
+                </div>
+                <!--版权信息-->
+                <div>
+                    COPYRIGHT © 远瞻股权投资管理（上海）有限公司
+                </div>
+                <!--友情链接-->
+
+                <div class="flink"><span>友情链接：</span><flink order="sort DESC"><a href="{$link}" <if condition="$target eq 2">target='_blank'</if> title="{$title}">{$title}</a><span>|</span>
+                </flink><a href="#" target="_blank">九口袋网络</a></div>
+                <!--统计代码-->
+                <div>{$site.tongji}</div>
+            </div>
+
+            <div class="footer_r">
+                <ul>
+                    <volist name="ad_info" id="vo">
+                    <li>
+                        <span><img src="__UPLOAD__/picture/{$vo.ad_img}" alt="{$vo.ad_name}"/></span>
+                        <em>{$vo.ad_name}</em>
+                    </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--footer结束-->
+    <script src="__JS__/sea.js"></script>
+    <script type="text/javascript">
+        seajs.config({
+            alias : {
+                jq : 'jquery-1.11.1.min',
+                jslide : 'jquery.SuperSlide.2.1.1',
+                main : 'main',
+                layer: '__JS__/../layer/layer'
+            },
+            preload : ['jq','jslide','layer']
+        });
+        seajs.use('main');
+    </script>
+</body>
+</html>
+

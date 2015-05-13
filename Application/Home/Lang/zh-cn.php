@@ -12,7 +12,7 @@ return array(
     'T_PRODUCT_ABOUT'=>'产品简介',
     'T_PRODUCT_DETAIL'=>'产品信息',
     'T_MORE'=>'更多',
-    'T_NEWS'=>'新闻中心',
+    'T_NEWS'=>'新闻动态',
     'T_NEWS_CONTENT'=>'新闻内容',
     'T_LESSON'=>'课程介绍',
     'T_SERVICE'=>'服务介绍',

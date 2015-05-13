@@ -18,15 +18,27 @@ ini_set('date.timezone', 'Asia/Shanghai');
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',true);
 
+
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+$uachar = "/(nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|mobile)/i";
+if( preg_match($uachar, $ua))
+{
+    define('APP_PATH','./Application/Wap/');
+}
 // 定义应用目录
 define('APP_PATH','./Application/');
 define("WEB_ROOT", dirname(__FILE__) . "/Application/");
 define("DatabaseBackDir", WEB_ROOT . "Database/"); //系统备份数据库文件存放目录
 define('WEB_CACHE_PATH', WEB_ROOT."Runtime/");
+echo WEB_ROOT.'Common/Conf/systemConfig.php';
 if (!file_exists(WEB_ROOT.'Common/Conf/systemConfig.php')) {
     header("Location: Application/install/");
     exit;
 }
+
+
+
+
 // 引入ThinkPHP入口文件
 require './include/ThinkPHP.php';
 

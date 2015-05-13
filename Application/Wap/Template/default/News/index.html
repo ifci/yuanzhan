@@ -1,0 +1,35 @@
+<!--content开始-->
+    <div id="content">
+        <include file="Common:inside" />
+        <div class="main_t">
+            <div class="main_c">
+                <b>NEWS</b>
+                <em>新闻动态</em>
+            </div>
+        </div>
+        <div class="news center">
+            <include file="News:bar" />
+            <div class="news_r news_list">
+                <ul>
+                    <volist name="list" id="vo">
+                    <li>
+                        <div class="news_box">
+                            <a href="{:U('news/read',array('id'=>$vo['id']))}" title=""><img src="{:get_default_img($vo['image_id'])}" alt=""/></a>
+                        </div>
+                        <div class="news_tit">
+                            <span><a href="{:U('news/read',array('id'=>$vo['id']))}" title="">{$vo.title}</a></span>
+                            <i>UPDATA：{:date('Y/m/d',$vo['published'])}</i>
+                            <em><a href="{:U('news/read',array('id'=>$vo['id']))}" title="">{$vo.summary}</a></em>
+                        </div>
+                    </li>
+                    </volist>
+
+                </ul>
+
+                <!--分页-->
+                {$page}
+            </div>
+        </div>
+    </div>
+    <!--content结束-->
+

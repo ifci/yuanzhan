@@ -20,11 +20,11 @@
         <div class="center">
             <!--logo开始-->
             <div class="logo">
-                <a href="<?php echo C('WEB_ROOT');?>" title="远瞻股权"><img src="/yuanzhan/Public/Home/images/logo.png" alt="" /></a>
+                <a href="<?php echo C('WEB_ROOT');?>" title="远瞻投权"><img src="/yuanzhan/Public/Home/images/logo.png" alt="" /></a>
             </div>
             <div class="nav">
                 <ul>
-                    <?php $_m_nav=M("nav");$__list__=$_m_nav->where("lang='zh-cn'  AND type='top' AND parent_id=0")->order('sort DESC')->select();foreach($__list__ as $_k1=>$_v1):$cid=$_v1['id'];$child=$_m_nav->where('parent_id='.$cid)->order('sort DESC')->select();extract($_v1);?><li <?php if($nav_name == $webtitle): ?>class='nav_on'<?php endif; ?>>
+                    <?php $_m_nav=M("nav");$__list__=$_m_nav->where("lang='zh-cn'  AND type='top' AND parent_id=0")->order('sort DESC')->select();foreach($__list__ as $_k1=>$_v1):$cid=$_v1['id'];$child=$_m_nav->where('parent_id='.$cid)->order('sort DESC')->select();extract($_v1);?><li <?php if($webtitle == $nav_name): ?>class='nav_on'<?php endif; ?>>
                         <a href="<?php if($action == null): echo ($link); else: echo U($action); endif; ?>" title="<?php echo ($nav_name); ?>">
                             <span>
                                 <?php echo strtoupper($nav_rename);?>
@@ -102,19 +102,15 @@
 
                 <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
                 <!--统计代码-->
-                <div><a href="#" target="_blank">站长统计</a></div>
+                <div><?php echo ($site["tongji"]); ?></div>
             </div>
 
             <div class="footer_r">
                 <ul>
-                    <li>
-                        <span><img src="/yuanzhan/Public/Home/images/qrcode.jpg" alt=""/></span>
-                        <em>远瞻微信公众号</em>
-                    </li>
-                    <li>
-                        <span><img src="/yuanzhan/Public/Home/images/qrcode.jpg" alt=""/></span>
-                        <em>远瞻手机端</em>
-                    </li>
+                    <?php if(is_array($ad_info)): $i = 0; $__LIST__ = $ad_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                        <span><img src="/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>" alt="<?php echo ($vo["ad_name"]); ?>"/></span>
+                        <em><?php echo ($vo["ad_name"]); ?></em>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>
