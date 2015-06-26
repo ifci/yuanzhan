@@ -21,9 +21,9 @@ return array(
         ),
         'Webinfo' => array(
             'index' => '站点配置',
-            'setEmailConfig' => '邮箱配置',
+//            'setEmailConfig' => '邮箱配置',
             'setSafeConfig' => '安全配置',
-            'setWeixin'=>'微信配置',
+//            'setWeixin'=>'微信配置',
             'setListNum'=>'显示配置',
         ),
         'Models'=>array(
@@ -55,7 +55,7 @@ return array(
             'create_tag'=>'模版标签',
             'file_index'=>'文件管理',
             'link_index'=>'友情链接',
-            'message'=>'留言信息'
+//            'message'=>'留言信息'
         ),
         'Video' => array(
             'index' => '课程试听',

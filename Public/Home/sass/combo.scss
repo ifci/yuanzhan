@@ -24,12 +24,6 @@ $lcolor: #005ea7;   //链接颜色
 @mixin border($ct: #1a1a1a){
   border: 1px solid $ct;
 }
-//圆角方法
-@mixin radius($radius: 10px) {
-  　-webkit-border-radius: $radius;
-  　-moz-border-radius: $radius;
-  　border-radius: $radius;
-}
 //外边距
 @mixin margin($margin: 10px){
   margin: $margin;
@@ -67,11 +61,12 @@ $lcolor: #005ea7;   //链接颜色
   height: 44px;
   line-height: 42px;
   color: $color;
-  padding: 0 38px;
+  padding: 0 0 0 30px;
+  width: 300px;
   i{
     @include fz(30px);
     vertical-align: middle;
-    font-family: Impact;
+    font-family: AuroraBT-BoldCondensed29140;
   }
   span{
     @include fz(18px);
@@ -89,8 +84,8 @@ $lcolor: #005ea7;   //链接颜色
     @extend %fl;
     @include bor(bottom,#e0e0e0);
     @include fz(14px);
-    width: 25%;
-    margin-top: 30px;
+    width: 280px;
+    margin: 30px 0 0 20px;
     padding-bottom: 24px;
   }
   a{
@@ -101,10 +96,16 @@ $lcolor: #005ea7;   //链接颜色
   }
   span{
     display: block;
+    height: 20px;
+    overflow: hidden;
+    text-transform: Capitalize;
+    margin-top: 16px;
   }
   em{
     display: block;
     margin-top: 5px;
+    height: 36px;
+    overflow: hidden;
   }
   .box{
     width: 280px;
@@ -126,13 +127,15 @@ $lcolor: #005ea7;   //链接颜色
   height: 44px;
   line-height: 42px;
   @include border(#e0e0e0);
-  width: 288px;
+  @extend %inline;
+  min-width: 288px;
   @include align;
   color: $color;
+  padding: 0 10px;
   b{
     font-size: 30px;
     vertical-align: middle;
-    font-family:AuroraBT-BoldCondensed29140;
+    font-family:AuroraBT-BoldCondensed29140,Arial;
   }
   em{
     font-size: 18px;
@@ -343,9 +346,10 @@ li.news_rcm{
     }
   }
   .news_bs{
-    line-height: 30px;
+    line-height: 32px;
     @include border(#e9e9e9);
     @extend %clearfix;
+    margin-top: 10px;
     .share{
       @extend %fl;
       @include fz(14px);
@@ -375,7 +379,7 @@ li.news_rcm{
     @include fz(14px);
     & > div{
       @extend %clearfix;
-      margin-top: 10px;
+      margin-top: 20px;
       a{
         &:hover{
           color: #000;
@@ -444,14 +448,14 @@ li.news_rcm{
     width: 1300px;
   }
   li{
-    width: 340px;
-    margin: 0 90px 50px 0;
+    width: 360px;
+    margin: 0 60px 50px 0;
     @extend %fl;
     cursor: pointer;
   }
   .box{
     @include border(#ccc);
-    height: 278px;
+    height: 228px;
     overflow: hidden;
     img{
       width: 100%;

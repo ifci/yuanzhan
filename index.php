@@ -10,32 +10,59 @@
 // +----------------------------------------------------------------------
 
 // 应用入口文件
-
 // 检测PHP环境
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 ob_start();
+
+
 ini_set('date.timezone', 'Asia/Shanghai');
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',true);
 
 
-$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+/*$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 $uachar = "/(nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|mobile)/i";
-if( preg_match($uachar, $ua))
+if(($ua == '' || preg_match($uachar, $ua))&& $_SERVER['SERVER_NAME'] != 'm.lighthousecapital.cn')
 {
-    define('APP_PATH','./Application/Wap/');
+    $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+    $is_ipad = (strpos($agent, 'ipad')) ? true : false;
+    if(!$is_ipad){
+        header('Location:http://m.lighthousecapital.cn/');
+        exit;
+    }
 }
+define('__WAP__','http://yz.lighthousecapital.cn/wap');*/
+
+
+
+
+/*$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+$uachar = "/(nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|mobile)/i";
+if(($ua == '' || preg_match($uachar, $ua)) && $_SERVER['SERVER_NAME'] != 'yz.lighthousecapital.cn')
+{
+    $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+    $is_ipad = (strpos($agent, 'ipad')) ? true : false;
+    if(!$is_ipad){
+        header("Location: Wap/");
+        exit;
+    }
+}*/
 // 定义应用目录
-define('APP_PATH','./Application/');
-define("WEB_ROOT", dirname(__FILE__) . "/Application/");
+if($_SERVER['SERVER_NAME'] == 'm.lighthousecapital.cn'){
+    define('APP_PATH','./Application/');
+    define("WEB_ROOT", dirname(__FILE__) . "/Application/Wap/");
+}else{
+    define('APP_PATH','./Application/');
+    define("WEB_ROOT", dirname(__FILE__) . "/Application/");
+}
 define("DatabaseBackDir", WEB_ROOT . "Database/"); //系统备份数据库文件存放目录
 define('WEB_CACHE_PATH', WEB_ROOT."Runtime/");
-echo WEB_ROOT.'Common/Conf/systemConfig.php';
-if (!file_exists(WEB_ROOT.'Common/Conf/systemConfig.php')) {
+//echo WEB_ROOT.'Common/Conf/systemConfig.php';
+/*if (!file_exists(WEB_ROOT.'Common/Conf/systemConfig.php')) {
     header("Location: Application/install/");
     exit;
 }
-
+*/
 
 
 

@@ -7,7 +7,7 @@
         <div class="bd">
             <ul>
                 <volist name="ad_banner" id="vo">
-                <li style="background:url(__UPLOAD__/picture/{$vo.ad_img}) top center;">
+                <li style="background:url(__UPLOAD__/picture/{$vo.ad_img}) top center no-repeat;">
                     <a href="{$vo.ad_link}" title="{$vo.ad_name}"></a>
                 </li>
                 </volist>
@@ -20,7 +20,7 @@
             <div class="cont_t">
                 <div class="cont_tl s_01"></div>
                 <div class="cont_tr">
-                    <a href="{:U('Video/index')}" title="查看更多" target="_blank"></a>
+                    <a href="{:U('/video')}" title="查看更多" target="_blank"></a>
                 </div>
             </div>
             <div class="video_list">
@@ -40,14 +40,14 @@
     <!--首页新闻-->
     <div class="cont_h2">
         <div class="center">
-            <div class="bnext"></div>
+            <div class="bnext"><i></i></div>
             <div class="news_con">
                 <!--远瞻新闻-->
                 <div class="news_l">
                     <div class="cont_t">
                         <div class="cont_tl s_02"></div>
                         <div class="cont_tr">
-                            <a href="{:U('News/index','id=2')}" title="查看更多" target="_blank"></a>
+                            <a href="{:U('news/2')}" title="查看更多" target="_blank"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -55,12 +55,12 @@
                             <news  limit="4"  where="cid=2" order="published DESC" >
                             <li>
                                 <div class="news_img">
-                                    <a href="{:U('news/read',array('id'=>$new['id']))}" title=""><img src="{:get_default_img($new['image_id'])}" alt=""/></a>
+                                    <a href="{:U('news_r/'.$new['id'])}" title="{$new['title']}"><img src="{:get_default_img($new['image_id'])}" alt=""/></a>
                                 </div>
                                 <div class="news_tit">
-                                    <span><a href="{:U('news/read',array('id'=>$new['id']))}" title="">{:cutStr($new['title'],24,0)}</a></span>
-                                    <i>UPDATA：{$new['published']|date='Y-m-d',###}</i>
-                                    <em><a href="{:U('news/read',array('id'=>$new['id']))}" title="">{:cutStr(trim($new['summary']),50,0)}</a></em>
+                                    <span><a href="{:U('news_r/'.$new['id'])}" title="{$new['title']}">{:cutStr($new['title'],24,0)}</a></span>
+                                    <i>UPDATED：{$new['published']|date='Y-m-d',###}</i>
+                                    <em><a href="{:U('news_r/'.$new['id'])}" title="{:cutStr($new['summary'])}">{:cutStr(trim($new['summary']),50,0)}</a></em>
                                 </div>
                             </li>
                             </news>
@@ -72,7 +72,7 @@
                     <div class="cont_t">
                         <div class="cont_tl s_03"></div>
                         <div class="cont_tr">
-                            <a href="{:U('News/index','id=4')}" title="查看更多" target="_blank"></a>
+                            <a href="{:U('news/4')}" title="查看更多" target="_blank"></a>
                         </div>
                     </div>
                     <div class="news_list">
@@ -80,12 +80,12 @@
                             <news  limit="4"  where="cid=4" order="published DESC" >
                                 <li>
                                     <div class="news_img">
-                                        <a href="{:U('news/read',array('id'=>$new['id']))}" title=""><img src="{:get_default_img($new['image_id'])}" alt=""/></a>
+                                        <a href="{:U('news_r/'.$new['id'])}" title=""><img src="{:get_default_img($new['image_id'])}" alt=""/></a>
                                     </div>
                                     <div class="news_tit">
-                                        <span><a href="{:U('news/read',array('id'=>$new['id']))}" title="">{:cutStr($new['title'],24,0)}</a></span>
-                                        <i>UPDATA：{$new['published']|date='Y-m-d',###}</i>
-                                        <em><a href="{:U('news/read',array('id'=>$new['id']))}" title="">{:cutStr(trim($new['summary']),50,0)}</a></em>
+                                        <span><a href="{:U('news_r/'.$new['id'])}" title="">{:cutStr($new['title'],24,0)}</a></span>
+                                        <i>UPDATAD：{$new['published']|date='Y-m-d',###}</i>
+                                        <em><a href="{:U('news_r/'.$new['id'])}" title="">{:cutStr(trim($new['summary']),50,0)}</a></em>
                                     </div>
                                 </li>
                             </news>
@@ -98,20 +98,20 @@
     <!--已投项目-->
     <div class="cont_h3">
         <div class="center">
-            <div class="bnext"></div>
+            <div class="bnext"><i></i></div>
             <div class="cont_t">
                 <div class="cont_tl s_04"></div>
                 <div class="cont_tr">
-                    <a href="{:U('Product/index')}" title="查看更多" target="_blank"></a>
+                    <a href="{:U('/product')}" title="查看更多" target="_blank"></a>
                 </div>
             </div>
             <div class="cont_h3_ul">
-                <ul>
+                <ul id="da-thumbs">
                     <volist name="pro_list" id="vo">
                     <li>
                         <a href="{$vo.url}" title="{$vo.description}" target="_blank">
                             <img src="{:get_default_img($vo['image_id'])}" alt="{$vo.title}"/>
-                            <div class="mask"></div>
+                            <div class="mask hot_info"></div>
                             <div class="box">
                                 <span>{$vo.title}</span>
                                 <em>{$vo.ename}</em>

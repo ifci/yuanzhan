@@ -366,6 +366,49 @@ section, article, aside, header, footer, nav, dialog, figure {
   }
 }
 
+.layer{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.layer-shade{
+  width: 100%;
+  height: 100%;
+}
+
+.layer-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  box-shadow: 1px 1px 50px rgba(0,0,0,.3);
+}
+
+.layer-box-con{
+  @extend %pr;
+  z-index: 9;
+}
+
+.layer-close{
+  @extend %icon,%pa;
+  right: -20px;
+  top: -20px;
+  width: 38px;
+  height: 38px;
+  margin-left: 0;
+  background-position: 0 -174px;
+  cursor: pointer;
+  z-index: 10;
+  &:hover{
+    background-position: 0 -215px;
+  }
+}
+
+
+
 
 %ffst{  //宋体
   font-family: SimSun;

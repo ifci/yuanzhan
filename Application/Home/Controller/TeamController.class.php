@@ -20,18 +20,20 @@ class TeamController extends BaseController {
         $T = M('Team');
         $Tbar = $T -> field('id,title') -> where('status=1') -> order('id ASC') -> select();
         $this -> assign('Tbar', $Tbar);
-        $id=I('get.id');
+        /*$id=I('get.id');
         $map['id']=$id;
         if(!$id){
             $map['id']=$Tbar[0]['id'];
-        }
+        }*/
         /*if(!$id){$this->_empty($id);}*/
-        if($info=$T->where($map)->find()) {
+        /*if($info=$T->where($map)->find()) {
             if ($info['status'] == 0) {
                 $this->_empty($id);
             }
-            $this->assign('info', $info);
-        }
+            $this->assign('list', $list);
+        }*/
+        $list = $T -> where('status=1') -> order('id ASC') -> select();
+        $this->assign('list', $list);
         $this->display();
 
 

@@ -2,16 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+            window.location.href = "http://yz.lighthousecapital.cn/wap";
+        }
+    </script>
     <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7|chrome=1" />
     <meta name="author" content="JKD TEAM">
     <title><?php echo ($webtitle); ?>-<?php echo ($site["name"]); ?></title>
-    <meta name="keywords" content="<?php echo ($site["keyword"]); ?>,<?php echo ($info['keywords']); ?>">
-    <meta name="description" content="<?php echo ($site["description"]); ?>,<?php echo ($info['description']); ?>">
+    <meta name="keywords" content="<?php echo ($info['keywords'] ? $info['keywords'] : $site["keyword"]); ?>">
+    <meta name="description" content="<?php echo ($info['description'] ? $info['description'] : $site["description"]); ?>">
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
-    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
-    <link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/>
+    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>" rel="stylesheet" />
+    <!--[if !IE]> --><link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/><!-- <![endif]-->
 </head>
 
 <body>
@@ -54,7 +59,7 @@
         |
         <a href="<?php echo U($b_url);?>" title="<?php echo ($webtitle); ?>"><?php echo ($webtitle); ?></a>
         <?php if($details == 1): ?>|
-        <a href="/yuanzhan/Team/index.html" title=""><?php echo ($info['title']); ?></a><?php endif; ?>
+        <a href="/yuanzhan/Team/index.html" title="<?php echo ($info['title']); ?>"><?php echo ($info['title']); ?></a><?php endif; ?>
     </div>
 </div>
     <div class="main_t">
@@ -65,28 +70,29 @@
     </div>
     <div class="news center">
         <div class="news_l">
-    <ul class="news_cat">
+    <ul class="news_cat team_bar">
         <?php $cv = $_GET['id'] ? $_GET['id'] : $Tbar[0]['id']; ?>
-        <?php if(is_array($Tbar)): $k = 0; $__LIST__ = $Tbar;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><li class="<?php if($cv == $vo['id']): ?>news_on<?php endif; ?>">
-        <a href="<?php echo U('Team/index',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>">
+        <?php if(is_array($Tbar)): $k = 0; $__LIST__ = $Tbar;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><li>
+        <a href="javascript:" title="<?php echo ($vo["title"]); ?>">
             <i></i>
             <span><?php echo ($vo["title"]); ?></span>
         </a>
         </li><?php endforeach; endif; else: echo "" ;endif; ?>
     </ul>
 </div>
-        <div class="news_r team">
-            <div class="team_t">
+        <div class="news_r team" style="margin-top:60px">
+
+            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="team_t">
                 <div class="team_c">
-                    <img src="<?php echo get_default_img($info['image_id']);?>" alt=""/>
+                    <img src="<?php echo get_default_img($vo['image_id']);?>" alt=""/>
                 </div>
             </div>
             <div class="team_b">
-                <h3><?php echo ($info["etit"]); ?></h3>
-                <div class="team_txt"><?php echo ($info["etxt"]); ?></div>
-                <h3><?php echo ($info["tit"]); ?></h3>
-                <div class="team_txt"><?php echo ($info["txt"]); ?></div>
-            </div>
+                <h3><?php echo ($vo["etit"]); ?></h3>
+                <div class="team_txt"><?php echo ($vo["etxt"]); ?></div>
+                <h3><?php echo ($vo["tit"]); ?></h3>
+                <div class="team_txt"><?php echo ($vo["txt"]); ?></div>
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
 </div>
@@ -107,7 +113,7 @@
                 </div>
                 <!--服务热线-->
                 <div class="footer_tel">
-                    全国服务热线：<?php echo ($site["tel"]); ?>
+                    咨询热线：<?php echo ($site["tel"]); ?>
                 </div>
                 <!--版权信息-->
                 <div>
@@ -115,7 +121,10 @@
                 </div>
                 <!--友情链接-->
 
-                <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
+                <!-- <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?></div> -->
+                <div>
+                    <?php echo ($site["icp"]); ?>
+                </div>
                 <!--统计代码-->
                 <div><?php echo ($site["tongji"]); ?></div>
             </div>
@@ -123,7 +132,7 @@
             <div class="footer_r">
                 <ul>
                     <?php if(is_array($ad_info)): $i = 0; $__LIST__ = $ad_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-                        <span><img src="/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>" alt="<?php echo ($vo["ad_name"]); ?>"/></span>
+                        <span><img src="/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>" alt="<?php echo ($vo["ad_name"]); ?>" width="146" height="146" /></span>
                         <em><?php echo ($vo["ad_name"]); ?></em>
                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
@@ -138,9 +147,9 @@
                 jq : 'jquery-1.11.1.min',
                 jslide : 'jquery.SuperSlide.2.1.1',
                 main : 'main',
-                layer: '/yuanzhan/Public/Home/js/../layer/layer'
+                home: 'home.min'
             },
-            preload : ['jq','jslide','layer']
+            preload : ['jq','jslide'<?php if(CONTROLLER_NAME == Index): ?>,'home'<?php endif; ?>]
         });
         seajs.use('main');
     </script>

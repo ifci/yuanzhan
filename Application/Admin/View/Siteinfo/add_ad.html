@@ -36,9 +36,10 @@
                         <tr>
                             <th>投放位置：</th>
                             <td><select name="info[position]" style="width: 140px;">
-                                <option value="all" <if condition="$info['position'] eq 'all'">selected</if>>全局-除首页</option>
+                                <option value="all" <if condition="$info['position'] eq 'all'">selected</if>></option>
                                 <option value="index" <if condition="$info['position'] eq 'index'">selected</if>>首页</option>
                                 <option value="bottom" <if condition="$info['position'] eq 'bottom'">selected</if>>首页-底部</option>
+                                <option value="mobile" <if condition="$info['position'] eq 'mobile'">selected</if>>手机端-首页</option>
                             </select></td>
                         </tr>
                         <tr id="hidetr">

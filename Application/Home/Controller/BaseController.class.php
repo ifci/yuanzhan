@@ -15,6 +15,9 @@ class BaseController extends Controller{
         if(I('get.'.C('VAR_LANGUAGE'))){
             delDirAndFile(WEB_CACHE_PATH . "Cache/Home/");
         }
+        //面包屑导航
+        $action = M('Nav') -> where('nav_name='.$webtitle) -> getField('action');
+        $this -> assign('b_url', $action);
     }
 
     public function _empty($name){
@@ -67,9 +70,6 @@ class BaseController extends Controller{
     }
 
     public function inside(){
-        //面包屑导航
-        $action = M('Nav') -> where('nav_name='.$webtitle) -> getField('action');
-        $this -> assign('b_url', $action);
     }
 
 

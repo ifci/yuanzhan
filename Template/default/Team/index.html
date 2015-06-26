@@ -9,18 +9,21 @@
     </div>
     <div class="news center">
         <include file="Team:bar" />
-        <div class="news_r team">
+        <div class="news_r team" style="margin-top:60px">
+
+            <volist name="list" id="vo">
             <div class="team_t">
                 <div class="team_c">
-                    <img src="{:get_default_img($info['image_id'])}" alt=""/>
+                    <img src="{:get_default_img($vo['image_id'])}" alt=""/>
                 </div>
             </div>
             <div class="team_b">
-                <h3>{$info.etit}</h3>
-                <div class="team_txt">{$info.etxt}</div>
-                <h3>{$info.tit}</h3>
-                <div class="team_txt">{$info.txt}</div>
+                <h3>{$vo.etit}</h3>
+                <div class="team_txt">{$vo.etxt}</div>
+                <h3>{$vo.tit}</h3>
+                <div class="team_txt">{$vo.txt}</div>
             </div>
+            </volist>
         </div>
     </div>
 </div>

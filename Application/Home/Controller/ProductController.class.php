@@ -17,21 +17,22 @@ class ProductController extends BaseController {
         /*$cid=I('get.cid');*/
         /*echo $cid;*/
         if($cid){
-            $map['p.cid']=$cid;
+            $map['cid']=$cid;
         }
-        $map['p.status']=1;
-        $map['p.lang']=LANG_SET;
-        $count = $P->table($P->getTableName().' p')
+        $map['status']=1;
+        $map['lang']=LANG_SET;
+        /*$count = $P->table($P->getTableName().' p')
             ->join($C->getTableName().' c on c.cid=p.cid')
             ->field('p.id')
             ->where($map)->count();
         $page = new \Think\Page($count,C('LISTNUM.prolist'));
         $showPage = $page->show();
-        $this->assign("page", $showPage);
-        $list=$P->table($P->getTableName().' p')
+        $this->assign("page", $showPage);*/
+        /*$list=$P->table($P->getTableName().' p')
             ->join($C->getTableName().' c on c.cid=p.cid')
             ->field('p.id,p.cid,p.image_id,p.price,p.psize,p.title,p.ename,p.url,p.description,p.update_time,p.click,c.name as cname')
-            ->where($map)->order('id desc')->limit("$page->firstRow, $page->listRows")->select();
+            ->where($map)->order('id desc')->limit("$page->firstRow, $page->listRows")->select();*/
+        $list = $P -> where($map) -> order('id desc') -> select();
         $this->assign("list", $list);
 
         $this->assign("ad_info", $this->getAd('bottom'));

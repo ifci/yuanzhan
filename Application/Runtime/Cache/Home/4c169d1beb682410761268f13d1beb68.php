@@ -2,16 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+            window.location.href = "http://yz.lighthousecapital.cn/wap";
+        }
+    </script>
     <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7|chrome=1" />
     <meta name="author" content="JKD TEAM">
     <title><?php echo ($webtitle); ?>-<?php echo ($site["name"]); ?></title>
-    <meta name="keywords" content="<?php echo ($site["keyword"]); ?>,<?php echo ($info['keywords']); ?>">
-    <meta name="description" content="<?php echo ($site["description"]); ?>,<?php echo ($info['description']); ?>">
+    <meta name="keywords" content="<?php echo ($info['keywords'] ? $info['keywords'] : $site["keyword"]); ?>">
+    <meta name="description" content="<?php echo ($info['description'] ? $info['description'] : $site["description"]); ?>">
     <link rel="dns-prefetch" href="<?php echo C('WEB_ROOT');?>">
     <link rel="shortcut icon" href="/yuanzhan/favicon.ico">
-    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>|/yuanzhan/Public/Home/layer/skin/layer.css" rel="stylesheet" />
-    <link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/>
+    <link type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Home/css/base.css|<?php if(CONTROLLER_NAME == Index): ?>/yuanzhan/Public/Home/css/index.css<?php else: ?>/yuanzhan/Public/Home/css/combo.css<?php endif; ?>" rel="stylesheet" />
+    <!--[if !IE]> --><link href='http://www.youziku.com/webfont/NameCSS/29523' rel='stylesheet' type='text/css'/><!-- <![endif]-->
 </head>
 
 <body>
@@ -52,7 +57,7 @@
         </div>
         <div class="bd">
             <ul>
-                <?php if(is_array($ad_banner)): $i = 0; $__LIST__ = $ad_banner;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li style="background:url(/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>) top center;">
+                <?php if(is_array($ad_banner)): $i = 0; $__LIST__ = $ad_banner;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li style="background:url(/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>) top center no-repeat;">
                     <a href="<?php echo ($vo["ad_link"]); ?>" title="<?php echo ($vo["ad_name"]); ?>"></a>
                 </li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
@@ -64,7 +69,7 @@
             <div class="cont_t">
                 <div class="cont_tl s_01"></div>
                 <div class="cont_tr">
-                    <a href="<?php echo U('Video/index');?>" title="查看更多" target="_blank"></a>
+                    <a href="<?php echo U('/video');?>" title="查看更多" target="_blank"></a>
                 </div>
             </div>
             <div class="video_list">
@@ -82,26 +87,26 @@
     <!--首页新闻-->
     <div class="cont_h2">
         <div class="center">
-            <div class="bnext"></div>
+            <div class="bnext"><i></i></div>
             <div class="news_con">
                 <!--远瞻新闻-->
                 <div class="news_l">
                     <div class="cont_t">
                         <div class="cont_tl s_02"></div>
                         <div class="cont_tr">
-                            <a href="<?php echo U('News/index','id=2');?>" title="查看更多" target="_blank"></a>
+                            <a href="<?php echo U('news/2');?>" title="查看更多" target="_blank"></a>
                         </div>
                     </div>
                     <div class="news_list">
                         <ul>
                             <?php $__m_news=M("news"); $_news_list=$__m_news ->field("id,cid,title,update_time,image_id,status,published,summary,url") ->where("cid=2 AND status=1 AND lang='zh-cn'") ->order("published DESC") ->limit(4) ->select(); foreach ($_news_list as $key=>$new):?><li>
                                 <div class="news_img">
-                                    <a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><img src="<?php echo get_default_img($new['image_id']);?>" alt=""/></a>
+                                    <a href="<?php echo U('news_r/'.$new['id']);?>" title="<?php echo ($new['title']); ?>"><img src="<?php echo get_default_img($new['image_id']);?>" alt=""/></a>
                                 </div>
                                 <div class="news_tit">
-                                    <span><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr($new['title'],24,0);?></a></span>
-                                    <i>UPDATA：<?php echo (date('Y-m-d',$new['published'])); ?></i>
-                                    <em><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr(trim($new['summary']),50,0);?></a></em>
+                                    <span><a href="<?php echo U('news_r/'.$new['id']);?>" title="<?php echo ($new['title']); ?>"><?php echo cutStr($new['title'],24,0);?></a></span>
+                                    <i>UPDATED：<?php echo (date('Y-m-d',$new['published'])); ?></i>
+                                    <em><a href="<?php echo U('news_r/'.$new['id']);?>" title="<?php echo cutStr($new['summary']);?>"><?php echo cutStr(trim($new['summary']),50,0);?></a></em>
                                 </div>
                             </li><?php endforeach;?>
                         </ul>
@@ -112,19 +117,19 @@
                     <div class="cont_t">
                         <div class="cont_tl s_03"></div>
                         <div class="cont_tr">
-                            <a href="<?php echo U('News/index','id=4');?>" title="查看更多" target="_blank"></a>
+                            <a href="<?php echo U('news/4');?>" title="查看更多" target="_blank"></a>
                         </div>
                     </div>
                     <div class="news_list">
                         <ul>
                             <?php $__m_news=M("news"); $_news_list=$__m_news ->field("id,cid,title,update_time,image_id,status,published,summary,url") ->where("cid=4 AND status=1 AND lang='zh-cn'") ->order("published DESC") ->limit(4) ->select(); foreach ($_news_list as $key=>$new):?><li>
                                     <div class="news_img">
-                                        <a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><img src="<?php echo get_default_img($new['image_id']);?>" alt=""/></a>
+                                        <a href="<?php echo U('news_r/'.$new['id']);?>" title=""><img src="<?php echo get_default_img($new['image_id']);?>" alt=""/></a>
                                     </div>
                                     <div class="news_tit">
-                                        <span><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr($new['title'],24,0);?></a></span>
-                                        <i>UPDATA：<?php echo (date('Y-m-d',$new['published'])); ?></i>
-                                        <em><a href="<?php echo U('news/read',array('id'=>$new['id']));?>" title=""><?php echo cutStr(trim($new['summary']),50,0);?></a></em>
+                                        <span><a href="<?php echo U('news_r/'.$new['id']);?>" title=""><?php echo cutStr($new['title'],24,0);?></a></span>
+                                        <i>UPDATAD：<?php echo (date('Y-m-d',$new['published'])); ?></i>
+                                        <em><a href="<?php echo U('news_r/'.$new['id']);?>" title=""><?php echo cutStr(trim($new['summary']),50,0);?></a></em>
                                     </div>
                                 </li><?php endforeach;?>
                         </ul>
@@ -136,19 +141,19 @@
     <!--已投项目-->
     <div class="cont_h3">
         <div class="center">
-            <div class="bnext"></div>
+            <div class="bnext"><i></i></div>
             <div class="cont_t">
                 <div class="cont_tl s_04"></div>
                 <div class="cont_tr">
-                    <a href="<?php echo U('Product/index');?>" title="查看更多" target="_blank"></a>
+                    <a href="<?php echo U('/product');?>" title="查看更多" target="_blank"></a>
                 </div>
             </div>
             <div class="cont_h3_ul">
-                <ul>
+                <ul id="da-thumbs">
                     <?php if(is_array($pro_list)): $i = 0; $__LIST__ = $pro_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
                         <a href="<?php echo ($vo["url"]); ?>" title="<?php echo ($vo["description"]); ?>" target="_blank">
                             <img src="<?php echo get_default_img($vo['image_id']);?>" alt="<?php echo ($vo["title"]); ?>"/>
-                            <div class="mask"></div>
+                            <div class="mask hot_info"></div>
                             <div class="box">
                                 <span><?php echo ($vo["title"]); ?></span>
                                 <em><?php echo ($vo["ename"]); ?></em>
@@ -174,7 +179,7 @@
                 </div>
                 <!--服务热线-->
                 <div class="footer_tel">
-                    全国服务热线：<?php echo ($site["tel"]); ?>
+                    咨询热线：<?php echo ($site["tel"]); ?>
                 </div>
                 <!--版权信息-->
                 <div>
@@ -182,7 +187,10 @@
                 </div>
                 <!--友情链接-->
 
-                <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?><a href="#" target="_blank">九口袋网络</a></div>
+                <!-- <div class="flink"><span>友情链接：</span><?php $__m_link=M("link");$__link_list=$__m_link->where('display=1')->order('sort DESC')->limit()->select();foreach($__link_list as $_lk=>$_lv):extract($_lv);?><a href="<?php echo ($link); ?>" <?php if($target == 2): ?>target='_blank'<?php endif; ?> title="<?php echo ($title); ?>"><?php echo ($title); ?></a><span>|</span><?php endforeach; ?></div> -->
+                <div>
+                    <?php echo ($site["icp"]); ?>
+                </div>
                 <!--统计代码-->
                 <div><?php echo ($site["tongji"]); ?></div>
             </div>
@@ -190,7 +198,7 @@
             <div class="footer_r">
                 <ul>
                     <?php if(is_array($ad_info)): $i = 0; $__LIST__ = $ad_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-                        <span><img src="/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>" alt="<?php echo ($vo["ad_name"]); ?>"/></span>
+                        <span><img src="/yuanzhan/Uploads/picture/<?php echo ($vo["ad_img"]); ?>" alt="<?php echo ($vo["ad_name"]); ?>" width="146" height="146" /></span>
                         <em><?php echo ($vo["ad_name"]); ?></em>
                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
@@ -205,9 +213,9 @@
                 jq : 'jquery-1.11.1.min',
                 jslide : 'jquery.SuperSlide.2.1.1',
                 main : 'main',
-                layer: '/yuanzhan/Public/Home/js/../layer/layer'
+                home: 'home.min'
             },
-            preload : ['jq','jslide','layer']
+            preload : ['jq','jslide'<?php if(CONTROLLER_NAME == Index): ?>,'home'<?php endif; ?>]
         });
         seajs.use('main');
     </script>

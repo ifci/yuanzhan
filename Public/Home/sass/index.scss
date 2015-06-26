@@ -150,13 +150,13 @@ $lcolor: #005ea7;   //链接颜色
     width: 1300px;
   }
   li{
-    width: 340px;
-    margin-right: 90px;
+    width: 360px;
+    margin-right: 60px;
     @extend %fl;
   }
   .box{
     @include border(#ccc);
-    height: 278px;
+    height: 228px;
     overflow: hidden;
     img{
       width: 100%;
@@ -206,8 +206,7 @@ $lcolor: #005ea7;   //链接颜色
   -moz-transform: translate(0,-8px);
   -o-transform: translate(0,-8px);
   transform: translate(0,-8px);
-  &:after{
-    content:'';
+  i{
     width: 36px;
     height: 22px;
     @extend %inline,%icon;
@@ -312,7 +311,7 @@ $lcolor: #005ea7;   //链接颜色
   }
   .bnext{
     background: #eeeded;
-    &:after{
+    i{
       background-position: -4px -110px;
     }
   }
@@ -347,8 +346,8 @@ $lcolor: #005ea7;   //链接颜色
     height: 100%;
     background: #000;
     opacity: .8;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    -moz-opacity: .8;
+    filter:alpha(opacity=80);
   }
   .box{
     display: none;

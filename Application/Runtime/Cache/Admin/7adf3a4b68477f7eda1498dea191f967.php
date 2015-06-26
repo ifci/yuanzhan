@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>登录-<?php echo ($site["SITE_INFO"]["name"]); ?></title>
-        <link rel="stylesheet" type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Admin/Css/base.css|/yuanzhan/Public/Js/asyncbox/skins/default.css" />
-        <script type="text/javascript" src="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Js/jquery-1.9.0.min.js|/yuanzhan/Public/Js/functions.js|/yuanzhan/Public/Js/jquery.form.js|/yuanzhan/Public/Js/asyncbox/asyncbox.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Public/Min/?f=/Public/Admin/Css/base.css|/Public/Js/asyncbox/skins/default.css" />
+        <script type="text/javascript" src="/Public/Min/?f=/Public/Js/jquery-1.9.0.min.js|/Public/Js/functions.js|/Public/Js/jquery.form.js|/Public/Js/asyncbox/asyncbox.js"></script>
     </head>
 <body class="loginWeb">
     <div class="loginBox">
         <div class="innerBox">
-            <div class="logo"> <img src="/yuanzhan/Public/Admin/Img/logo.png" /></div>
+            <div class="logo"> <img src="/Public/Admin/Img/logo.png" /></div>
             <form id="form1" action="" method="post">
                 <div class="loginInfo">
                     <ul>

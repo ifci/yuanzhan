@@ -15,6 +15,7 @@ return array(
     'TOKEN_RESET' => FALSE, //令牌验证出错后是否重置令牌 默认为true
 
     'LOAD_EXT_CONFIG' => 'systemConfig',
+    'URL_CASE_INSENSITIVE' => true,
 
     'DEFAULT_C_LAYER'       =>  'Controller', // 默认的控制器层名称
     'MODULE_ALLOW_LIST'     =>  array('Home','Jkd','Wap'), // 配置你原来的分组列表

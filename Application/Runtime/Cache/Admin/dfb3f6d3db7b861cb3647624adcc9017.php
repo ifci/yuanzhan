@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <title>添加编辑图片-网站设置-<?php echo ($site["SITE_INFO"]["name"]); ?></title>
     <?php $addCss=""; $addJs=""; $currentNav ='网站设置 > 添加编辑图片'; ?>
-    <link rel="stylesheet" type="text/css" href="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Admin/Css/base.css|/yuanzhan/Public/Admin/Css/layout.css|/yuanzhan/Public/Js/asyncbox/skins/default.css<?php echo ($addCss); ?>" />
-<script type="text/javascript" src="/yuanzhan/Public/Min/?f=/yuanzhan/Public/Js/jquery-1.9.0.min.js|/yuanzhan/Public/Js/jquery.lazyload.js|/yuanzhan/Public/Js/functions.js|/yuanzhan/Public/Admin/Js/base.js|/yuanzhan/Public/Js/jquery.form.js|/yuanzhan/Public/Js/asyncbox/asyncbox.js<?php echo ($addJs); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/Min/?f=/Public/Admin/Css/base.css|/Public/Admin/Css/layout.css|/Public/Js/asyncbox/skins/default.css<?php echo ($addCss); ?>" />
+<script type="text/javascript" src="/Public/Min/?f=/Public/Js/jquery-1.9.0.min.js|/Public/Js/jquery.lazyload.js|/Public/Js/functions.js|/Public/Admin/Js/base.js|/Public/Js/jquery.form.js|/Public/Js/asyncbox/asyncbox.js<?php echo ($addJs); ?>"></script>
 </head>
 <body>
 <div class="wrap"> <div id="Top">
-    <div class="logo"><a target="_blank" href="<?php echo ($site["WEB_ROOT"]); ?>"><img src="/yuanzhan/Public/Admin/Img/logo.png" /></a></div>
-    <div class="help"><a href="http://www.conist.com/bbs" target="_blank">使用帮助</a><span><a href="http://www.conist.com" target="_blank">关于</a></span></div>
+    <div class="logo"><a target="_blank" href="<?php echo ($site["WEB_ROOT"]); ?>"><img src="/Public/Admin/Img/logo.png" /></a></div>
+    <div class="help"><a href="#">网站地图</a><span><a href="http://www.9koudai.net" target="_blank">关于</a></span></div>
     <div class="menu">
         <ul> <?php echo ($menu); ?> </ul>
     </div>
 </div>
 <div id="Tags">
-    <div class="userPhoto"><img src="/yuanzhan/Public/Admin/Img/userPhoto.jpg" /> </div>
+    <div class="userPhoto"><img src="/Public/Admin/Img/userPhoto.jpg" /> </div>
     <div class="navArea">
         <div class="userInfo"><div><a href="<?php echo U('Webinfo/index');?>" class="sysSet"><span>&nbsp;</span>系统设置</a> <a href="<?php echo U("Public/loginOut");?>" class="loginOut"><span>&nbsp;</span>退出系统</a></div>欢迎您，<?php echo ($my_info["email"]); ?></div>
         <div class="nav"><font id="today"><?php echo date("Y-m-d H:i:s"); ?></font>您的位置：<?php echo ($currentNav); ?></div>
@@ -56,9 +56,10 @@
                         <tr>
                             <th>投放位置：</th>
                             <td><select name="info[position]" style="width: 140px;">
-                                <option value="all" <?php if($info['position'] == 'all'): ?>selected<?php endif; ?>>全局-除首页</option>
+                                <option value="all" <?php if($info['position'] == 'all'): ?>selected<?php endif; ?>></option>
                                 <option value="index" <?php if($info['position'] == 'index'): ?>selected<?php endif; ?>>首页</option>
                                 <option value="bottom" <?php if($info['position'] == 'bottom'): ?>selected<?php endif; ?>>首页-底部</option>
+                                <option value="mobile" <?php if($info['position'] == 'mobile'): ?>selected<?php endif; ?>>手机端-首页</option>
                             </select></td>
                         </tr>
                         <tr id="hidetr">
@@ -77,7 +78,7 @@
                         <?php if($info['ad_img']){ ?>
                         <tr>
                             <th>图片显示：</th>
-                            <td><a href="/yuanzhan/Uploads/picture/<?php echo ($info["ad_img"]); ?>" target="_blank"><img src="/yuanzhan/Uploads/picture/<?php echo ($info["ad_img"]); ?>" border="0" height="40" width="200"></a></td>
+                            <td><a href="/Uploads/picture/<?php echo ($info["ad_img"]); ?>" target="_blank"><img src="/Uploads/picture/<?php echo ($info["ad_img"]); ?>" border="0" height="40" width="200"></a></td>
                         </tr>
                         <?php } ?>
 
